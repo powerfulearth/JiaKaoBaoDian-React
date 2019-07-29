@@ -39,7 +39,7 @@ class Index extends React.Component {
             />
             }
             selected={this.state.selectedTab === 'blueTab'}
-            badge={1}
+            // badge={1}
             onPress={() => {
               this.setState({
                 selectedTab: 'blueTab',
@@ -66,7 +66,7 @@ class Index extends React.Component {
             }
             title="Koubei"
             key="Koubei"
-            badge={'new'}
+            // badge={'new'}
             selected={this.state.selectedTab === 'redTab'}
             onPress={() => {
               this.setState({
