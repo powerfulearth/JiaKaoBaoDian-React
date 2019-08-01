@@ -3,6 +3,7 @@ import React from 'react'
 import { TabBar } from 'antd-mobile';
 
 import Home from './mine/index';
+import One from '../pages/exam/one/One'
 
 class Index extends React.Component {
   constructor(props) {
@@ -47,7 +48,7 @@ class Index extends React.Component {
             }}
             data-seed="logId"
           >
-            <div>首页</div>
+            <div>报名</div>
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -75,7 +76,7 @@ class Index extends React.Component {
             }}
             data-seed="logId1"
           >
-            <div>驾考</div>
+            <One></One>
           </TabBar.Item>
           <TabBar.Item
             icon={
