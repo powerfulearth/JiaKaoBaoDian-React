@@ -3,7 +3,7 @@ import React from 'react'
 import { TabBar } from 'antd-mobile';
 
 import Home from './mine/index';
-import One from '../pages/exam/one/One'
+import Exam from './exam/index'
 
 class Index extends React.Component {
   constructor(props) {
@@ -76,7 +76,7 @@ class Index extends React.Component {
             }}
             data-seed="logId1"
           >
-            <One></One>
+            <Exam></Exam>
           </TabBar.Item>
           <TabBar.Item
             icon={

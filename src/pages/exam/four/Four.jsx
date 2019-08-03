@@ -5,7 +5,7 @@ import ExamTest from '../components/examTest/ExamTest'
 
 import BibleTool from '../components/bibleTool/BibleTool'
 
-class One extends Component {
+class Four extends Component {
   render() {
     return (
       <>
@@ -17,4 +17,4 @@ class One extends Component {
   }
 }
 
-export default One;
+export default Four;
