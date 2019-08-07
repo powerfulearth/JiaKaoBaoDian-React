@@ -28,6 +28,9 @@ const StyledTestContainer = styled.div`
           margin-top: .06rem;
         }
       }
+      .swiper-slide:nth-child(2) {
+        z-index: 2;
+      }
       .swiper-slide-active {
         width: 1.68rem !important;
         height: 1rem;

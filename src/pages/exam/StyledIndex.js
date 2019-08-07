@@ -28,11 +28,10 @@ const StyledIndexContainer = styled.div`
   }
   .am-tabs-default-bar-content {
     width: 100%;
-    padding: 0 .16rem;
+    padding: .16rem .16rem;
     display: flex;
     justify-content: space-between;
     align-items: end;
-    padding-top: .17rem;
     background: #FEE83D;
     .am-tabs-default-bar-tab {
       width: auto !important;
@@ -42,9 +41,10 @@ const StyledIndexContainer = styled.div`
       margin-top: .1rem;
       line-height: .15rem;
       color: #131313;
+      border: 0;
     }
     .am-tabs-default-bar-tab::after {
-      height: 0;
+      display: none !important;
     }
     .am-tabs-default-bar-tab-active {
       width: auto !important;
@@ -53,12 +53,12 @@ const StyledIndexContainer = styled.div`
       height: .24rem;
       line-height: .24rem;
       font-weight: bold;
-      border: none;
+      border: 0;
     }
     .am-tabs-default-bar-underline {
       width: 0;
       height: 0;
-      border: none;
+      border: 0;
     }
   }
 ` 

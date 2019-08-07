@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const StyledExamTabNavContainer = styled.div`
   overflow: hidden;
   width: 100%;
-  height: 1.84rem;
+  height: 1.68rem;
   padding: 0 .15rem ;
   background: #FEE83D;
   border-radius: 0 0 .3rem .3rem;
@@ -12,7 +12,7 @@ const StyledExamTabNavContainer = styled.div`
     height: 1.45rem;
     background: #fff;
     margin: 0 auto;
-    margin-top: .25rem;
+    margin-top: .09rem;
     padding: .13rem .1rem;
     border-radius: .2rem;
     box-shadow:0px 3px 4px 0px rgba(28,28,28,0.1);
