@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom' 
+// import { withRouter } from 'react-router-dom' 
 
 import ExamTestUI from './ExamTestUI'
 import Swiper from 'swiper'
@@ -8,17 +8,11 @@ import 'swiper/dist/css/swiper.css'
 class ExamTest extends Component {
   render() {
     return (
-      <ExamTestUI click={this.click.bind(this)}>
-
+      <ExamTestUI>
+        
       </ExamTestUI>
     );
   }
-
-  click() {
-    this.props.history.push('/test:known')
-  }
-
-
   componentDidMount() {
     new Swiper('.swiper-container', {
       initialSlide: 1,
@@ -30,4 +24,4 @@ class ExamTest extends Component {
   }
 }
 
-export default withRouter(ExamTest);
+export default ExamTest

@@ -5,6 +5,15 @@ import { TabBar } from 'antd-mobile';
 import Home from './mine/index';
 import Exam from './exam/index'
 
+import baoming from '../assets/images/baoming.png'
+import baoming_1 from '../assets/images/baoming_1.png'
+import jiakao from '../assets/images/jiakao.png'
+import jiakao_1 from '../assets/images/jiakao_1.png'
+import faxian from '../assets/images/faxian.png'
+import faxian_1 from '../assets/images/faxian_1.png'
+import wode from '../assets/images/wode.png'
+import wode_1 from '../assets/images/wode_1.png'
+
 class Index extends React.Component {
   constructor(props) {
     super(props);
@@ -21,7 +30,7 @@ class Index extends React.Component {
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
-          barTintColor="white"
+          barTintColor="#F7F7F7"
           hidden={this.state.hidden}
         >
           <TabBar.Item
@@ -30,13 +39,13 @@ class Index extends React.Component {
             icon={<div style={{
               width: '22px',
               height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }}
+              background: `url(${baoming}) center center /  21px 21px no-repeat` }}
             />
             }
             selectedIcon={<div style={{
               width: '22px',
               height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
+              background: `url(${baoming_1}) center center /  21px 21px no-repeat` }}
             />
             }
             selected={this.state.selectedTab === 'blueTab'}
@@ -55,14 +64,14 @@ class Index extends React.Component {
               <div style={{
                 width: '22px',
                 height: '22px',
-                background: 'url(https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  21px 21px no-repeat' }}
+                background: `url(${jiakao}) center center /  21px 21px no-repeat` }}
               />
             }
             selectedIcon={
               <div style={{
                 width: '22px',
                 height: '22px',
-                background: 'url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat' }}
+                background: `url(${jiakao_1}) center center /  21px 21px no-repeat` }}
               />
             }
             title="Koubei"
@@ -83,14 +92,14 @@ class Index extends React.Component {
               <div style={{
                 width: '22px',
                 height: '22px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  21px 21px no-repeat' }}
+                background: `url(${faxian}) center center /  21px 21px no-repeat` }}
               />
             }
             selectedIcon={
               <div style={{
                 width: '22px',
                 height: '22px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat' }}
+                background: `url(${faxian_1}) center center /  21px 21px no-repeat` }}
               />
             }
             title="Friend"
@@ -106,8 +115,20 @@ class Index extends React.Component {
             <div>买车？？</div>
           </TabBar.Item>
           <TabBar.Item
-            icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
-            selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
+            icon={
+              <div style={{
+                width: '22px',
+                height: '22px',
+                background: `url(${wode}) center center /  21px 21px no-repeat` }}
+              />
+            }
+            selectedIcon={
+              <div style={{
+                width: '22px',
+                height: '22px',
+                background: `url(${wode_1}) center center /  21px 21px no-repeat` }}
+              />
+            }
             title="My"
             key="my"
             selected={this.state.selectedTab === 'yellowTab'}

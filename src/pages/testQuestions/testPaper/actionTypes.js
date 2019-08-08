@@ -1,1 +1,1 @@
-export const TESTPAGE = 'TEST_PAGE'
+export const TEST_PAGE = 'TEST_PAGE'

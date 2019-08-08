@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { StyledTestContainer } from './StyledExamTest'
 
+import { withRouter } from 'react-router-dom' 
+
 class ExamTestUI extends Component {
   
   render() {
@@ -13,11 +15,11 @@ class ExamTestUI extends Component {
               <p>全真模拟</p>
               <p>100%仿真</p>
             </div>
-            <div className="swiper-slide" onTouchEnd={this.props.click}>
+            <div className="swiper-slide" onTouchEnd={()=>(this.props.history.push('/orderPractice'))}>
               <p>顺序练习</p>
               <p>0/1334</p>
             </div>
-            <div className="swiper-slide">
+            <div className="swiper-slide" onTouchEnd={()=>(this.props.history.push('/practiceExams'))}>
               <p>模拟考试</p>
               <p>100%仿真</p>
             </div>
@@ -28,4 +30,4 @@ class ExamTestUI extends Component {
   }
 }
 
-export default ExamTestUI;
+export default withRouter(ExamTestUI);

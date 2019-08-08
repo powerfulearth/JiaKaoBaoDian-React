@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 
-import { StyledTestQuestions } from './testQuestions'
+import { StyledTestQuestions } from './StyledTestQuestions'
 
 import TestHeader from './testHeader/TestHeader'
 import TestPaper from './testPaper/TestPaper'
-import TestBottom from './testBottom/TestBottom'
+// import TestBottom from './testBottom/TestBottom'
 
 
-class testQuestions extends Component {
+class TestQuestions extends Component {
   render() {
     return (
       <StyledTestQuestions>
-        <TestHeader> </TestHeader>
+        <TestHeader></TestHeader>
         <TestPaper></TestPaper>
-        <TestBottom></TestBottom>
       </StyledTestQuestions>
     );
   }
 }
 
-export default testQuestions;
+export default TestQuestions;

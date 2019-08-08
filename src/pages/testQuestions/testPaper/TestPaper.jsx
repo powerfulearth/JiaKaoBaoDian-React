@@ -45,14 +45,14 @@ class TestPaper extends Component {
       observer:true,//修改swiper自己或子元素时，自动初始化swiper
       observeParents:false,//修改swiper的父元素时，自动初始化swiper
     })
-    console.log(this);
   }
 
 }
 
 
 const mapState = state =>({
-  list: state.testPaper
+  list: state.testPaper.list,
+  _isTab: state.testHeader._isTab
 })
 const mapDispatch = dispatch => ({
   loadData: dispatch(asyncLoadData())

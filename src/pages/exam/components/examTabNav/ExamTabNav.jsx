@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom' 
 
 import ExamTabNavUI from './ExamTabNavUI'
 
@@ -6,19 +7,19 @@ import ExamTabNavUI from './ExamTabNavUI'
 class ExamHeader extends Component {
   render() {
     return (
-      <ExamTabNavUI>
+      <ExamTabNavUI itemDetail={this.itemDetail.bind(this)}>
       </ExamTabNavUI>
     );
   }
 
-  clickTap() {
-    
+  itemDetail() {
+    this.props.history.push('/specialTest')
   }
 
 
   componentDidMount() {
-
+    
   }
 }
 
-export default ExamHeader
+export default withRouter(ExamHeader)

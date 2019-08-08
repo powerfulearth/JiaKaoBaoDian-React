@@ -1,5 +1,7 @@
+import { TEST_PAGE } from './actionTypes'
+
 const syncLoadData = list => ({
-  type: "TEST_PAGE",
+  type: TEST_PAGE,
   list
 })
 

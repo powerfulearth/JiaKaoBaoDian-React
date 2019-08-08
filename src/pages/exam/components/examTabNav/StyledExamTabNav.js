@@ -21,6 +21,7 @@ const StyledExamTabNavContainer = styled.div`
       flex-wrap: wrap;
       justify-content: space-between;
       .item {
+        margin-right: .39rem;
         img {
           display: block;
           width: .3rem;
@@ -33,6 +34,12 @@ const StyledExamTabNavContainer = styled.div`
           font-size: .13rem;
           line-height: 1;
         }
+      }
+      .item:nth-child(4n) {
+        margin-right: 0;
+      }
+      .item:nth-child(n+5) {
+        margin-top: .15rem;
       }
     }
     .tabNav:nth-child(2) {
