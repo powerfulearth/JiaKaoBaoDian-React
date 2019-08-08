@@ -12,7 +12,8 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 html,
-body {
+body,
+#root {
   overflow: hidden;
   height: 100%; }
 

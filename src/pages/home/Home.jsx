@@ -2,13 +2,13 @@ import React from 'react'
 
 import { TabBar } from 'antd-mobile';
 
-import Home from './mine/index';
+import Mine from '../mine/Mine';
 
 class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'redTab',
+      selectedTab: 'yellowTab',
       hidden: false,
       fullScreen: true,
     };
@@ -22,6 +22,7 @@ class Index extends React.Component {
           tintColor="#33A3F4"
           barTintColor="white"
           hidden={this.state.hidden}
+          prerenderingSiblingsNumber={0}
         >
           <TabBar.Item
             title="Life"
@@ -116,7 +117,7 @@ class Index extends React.Component {
               });
             }}
           >
-            <Home></Home>
+            <Mine></Mine>
           </TabBar.Item>
         </TabBar>
       </div>
