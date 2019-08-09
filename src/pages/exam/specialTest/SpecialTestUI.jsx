@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { StyledSpecialTestContainer } from './StyledSpecialTest'
-import BackHeader from '../compoents/back_header/BackHeader'
+import BackHeader from '../../compoents/back_header/BackHeader'
 
 export default (props) => (
   <StyledSpecialTestContainer>

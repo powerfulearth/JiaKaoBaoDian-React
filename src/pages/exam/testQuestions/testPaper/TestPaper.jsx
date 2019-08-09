@@ -32,6 +32,7 @@ class TestPaper extends Component {
       })
     } else {
       this.setState({
+        index: '',
         isRight: 'false'
       })
     }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import http from '../../util/http'
+import http from '../../../util/http'
 
 import SpecialTestUI from './SpecialTestUI'
 

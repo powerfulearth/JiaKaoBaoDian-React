@@ -2,8 +2,8 @@ import {
   combineReducers
 } from 'redux'
 
-import { reducer as testPaper } from '../pages/testQuestions/testPaper/reducer'
-import { reducer as testHeader } from '../pages/testQuestions/testHeader/reducer'
+import { reducer as testPaper } from '../pages/exam/testQuestions/testPaper/reducer'
+import { reducer as testHeader } from '../pages/exam/testQuestions/testHeader/reducer'
 
 const reducer = combineReducers({
   testPaper,

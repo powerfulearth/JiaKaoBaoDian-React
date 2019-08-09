@@ -13,7 +13,7 @@ class ExamHeader extends Component {
   }
 
   itemDetail() {
-    this.props.history.push('/specialTest')
+    this.props.history.push('/exam/specialTest')
   }
 
 
