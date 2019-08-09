@@ -2,14 +2,23 @@ import React from 'react'
 
 import { TabBar } from 'antd-mobile';
 
+<<<<<<< HEAD
 import Home from './mine/index';
 import Apply from './apply/Apply'
+=======
+import Apply from './apply/Apply';
+import Found from './found/Found';
+>>>>>>> master
 
 class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+<<<<<<< HEAD
       selectedTab: 'blueTab',
+=======
+      selectedTab: 'Found',
+>>>>>>> master
       hidden: false,
       fullScreen: true,
     };
@@ -25,8 +34,8 @@ class Index extends React.Component {
           hidden={this.state.hidden}
         >
           <TabBar.Item
-            title="Life"
-            key="Life"
+            title="报名"
+            key="Apply"
             icon={<div style={{
               width: '22px',
               height: '22px',
@@ -39,11 +48,11 @@ class Index extends React.Component {
               background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
             />
             }
-            selected={this.state.selectedTab === 'blueTab'}
+            selected={this.state.selectedTab === 'Apply'}
             // badge={1}
             onPress={() => {
               this.setState({
-                selectedTab: 'blueTab',
+                selectedTab: 'Apply',
               });
             }}
             data-seed="logId"
@@ -65,13 +74,13 @@ class Index extends React.Component {
                 background: 'url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat' }}
               />
             }
-            title="Koubei"
-            key="Koubei"
+            title="驾考"
+            key="Exam"
             // badge={'new'}
-            selected={this.state.selectedTab === 'redTab'}
+            selected={this.state.selectedTab === 'Exam'}
             onPress={() => {
               this.setState({
-                selectedTab: 'redTab',
+                selectedTab: 'Exam',
               });
             }}
             data-seed="logId1"
@@ -93,31 +102,31 @@ class Index extends React.Component {
                 background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat' }}
               />
             }
-            title="Friend"
-            key="Friend"
+            title="发现"
+            key="Found"
             dot
-            selected={this.state.selectedTab === 'greenTab'}
+            selected={this.state.selectedTab === 'Found'}
             onPress={() => {
               this.setState({
-                selectedTab: 'greenTab',
+                selectedTab: 'Found',
               });
             }}
           >
-            <div>买车？？</div>
+            <Found></Found>
           </TabBar.Item>
           <TabBar.Item
             icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
             selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
-            title="My"
-            key="my"
-            selected={this.state.selectedTab === 'yellowTab'}
+            title="我的"
+            key="Mine"
+            selected={this.state.selectedTab === 'Mine'}
             onPress={() => {
               this.setState({
-                selectedTab: 'yellowTab',
+                selectedTab: 'Mine',
               });
             }}
           >
-            <Home></Home>
+            <div>我的信息</div>
           </TabBar.Item>
         </TabBar>
       </div>
