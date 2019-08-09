@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux'
 
+import MineIndex from './pages/mine/router/MineRouter';
 import store from './store/'
 
 import {
-  BrowserRouter as Router,
-  Route,
-  Switch
+  BrowserRouter as Router,Route,
 } from 'react-router-dom'
 
-import Home from './pages/home/Home';
-import Login from './pages/mine/login/Login';
 
 import './assets/styles/YoReset.css'
 
@@ -18,12 +15,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Router>
-          <Switch>
-            <Route path="/mine" component={Home} exact></Route>
-            <Route path="/mine/login" component={Login}></Route>
-          </Switch> 
-        </Router>
+        <Route path="/mine" component={MineIndex}></Route>
       </Provider>
     );
   }
