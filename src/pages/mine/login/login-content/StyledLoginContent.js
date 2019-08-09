@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-import Bg from 'assets/images/bg.png'
-import userIcon from 'assets/images/user-icon.png'
-import lock from 'assets/images/lock.png'
-import getToken from 'assets/images/get-token.png'
-import agree from 'assets/images/agree.png'
-import loginBtn from 'assets/images/login-btn.png'
-import wechat from 'assets/images/wechat.png'
+import Bg from 'assets/images/wsl/bg.png'
+import userIcon from 'assets/images/wsl/user-icon.png'
+import lock from 'assets/images/wsl/lock.png'
+import getToken from 'assets/images/wsl/get-token.png'
+import agree from 'assets/images/wsl/agree.png'
+import loginBtn from 'assets/images/wsl/login-btn.png'
+import wechat from 'assets/images/wsl/wechat.png'
 
 const LoginContainer = styled.div`
   width: 100%;

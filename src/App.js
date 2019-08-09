@@ -6,12 +6,11 @@ import store from './store/'
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Redirect
+  Switch
 } from 'react-router-dom'
 
 import Home from './pages/home/Home';
-import Login from './pages/login/Login';
+import Login from './pages/mine/login/Login';
 
 import './assets/styles/YoReset.css'
 
@@ -21,9 +20,8 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <Switch>
-            <Redirect from="/" to="/home" exact></Redirect>
-            <Route path="/home" component={Home}></Route>
-            <Route path="/login" component={Login}></Route>
+            <Route path="/mine" component={Home} exact></Route>
+            <Route path="/mine/login" component={Login}></Route>
           </Switch> 
         </Router>
       </Provider>
