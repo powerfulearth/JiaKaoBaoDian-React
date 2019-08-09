@@ -10,7 +10,7 @@ class Routers extends Component {
   render() {
     return (
       <Router>
-        <Route path="/" exact component={Index}></Route>
+        <Route path="/exam" exact ></Route>
         <Route path="/exam/specialTest" component={SpecialTest}></Route>
         <Route path="/exam/orderPractice" component={TestQuestions}></Route>
         <Route path="/exam/practiceExams" component={PracticeExams}></Route>
