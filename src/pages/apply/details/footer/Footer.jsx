@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import  {FooterContainer} from './StyledFooter';
 
-import HeartImg from "../../../../assets/images/heart.png"
+import HeartImg from "../../../../assets/images/apply/heart.png"
 
 class Footer extends Component {
   render() {

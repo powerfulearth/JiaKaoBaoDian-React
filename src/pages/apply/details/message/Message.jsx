@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 import { MessageContainer } from "./StyledMessage";
 
-import PhoneImg from '../../../../assets/images/phone.jpg';
-import ScanImg from '../../../../assets/images/scan.jpg';
-import LocationImg from '../../../../assets/images/location.jpg';
-import FlowerImg from '../../../../assets/images/flower.jpg';
-import MoreImg from '../../../../assets/images/more.png';
+import PhoneImg from '../../../../assets/images/apply/phone.jpg';
+import ScanImg from '../../../../assets/images/apply/scan.jpg';
+import LocationImg from '../../../../assets/images/apply/location.jpg';
+import FlowerImg from '../../../../assets/images/apply/flower.jpg';
+import MoreImg from '../../../../assets/images/apply/more.png';
 
 class Message extends Component {
   render() {

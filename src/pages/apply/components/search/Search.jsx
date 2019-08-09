@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { SearchContainer } from './StyledSearch';
 
-import SearchImg from '../../../../assets/images/search.png';
+import SearchImg from '../../../../assets/images/apply/search.png';
 
 class Search extends Component {
   render() {

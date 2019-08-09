@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import JiaoXiaoImg from '../../../../assets/images/jiaxiao.jpg'
+import JiaoXiaoImg from '../../../../assets/images/apply/jiaxiao.jpg'
 
 const HeadContainer = styled.div`
   width: 100%;

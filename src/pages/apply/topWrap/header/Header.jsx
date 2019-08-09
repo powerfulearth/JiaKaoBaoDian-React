@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import {HeaderContainer} from './StyledHeader';
-import B_arrow from '../../../../assets/images/b_arrow.png';
+import B_arrow from '../../../../assets/images/apply/b_arrow.png';
 import Search from '../../components/search/Search';
 
 class Header extends Component {

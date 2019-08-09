@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import {NavContainer} from './StyledNav';
-import NavImg from '../../../../assets/images/nav1.png';
+import NavImg from '../../../../assets/images/apply/nav1.png';
 
 
 class Nav extends Component {
