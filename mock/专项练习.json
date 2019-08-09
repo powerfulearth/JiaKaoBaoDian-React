@@ -1,0 +1,36 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": [
+    {
+      "specialtypeid": 1,
+      "specialtypename": "文字题",
+      "total": 682
+    },
+    {
+      "specialtypeid": 2,
+      "specialtypename": "图片题",
+      "total": 682
+    },
+    {
+      "specialtypeid": 3,
+      "specialtypename": "判断题",
+      "total": 682
+    },
+    {
+      "specialtypeid": 4,
+      "specialtypename": "单选题",
+      "total": 682
+    },
+    {
+      "specialtypeid": 5,
+      "specialtypename": "时间题",
+      "total": 682
+    },
+    {
+      "specialtypeid": 6,
+      "specialtypename": "速度题",
+      "total": 682
+    }
+  ]
+}

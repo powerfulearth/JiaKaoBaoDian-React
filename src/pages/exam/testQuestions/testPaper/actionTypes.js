@@ -1,0 +1,1 @@
+export const TEST_PAGE = 'TEST_PAGE'
