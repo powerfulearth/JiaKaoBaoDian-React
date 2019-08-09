@@ -1,12 +1,14 @@
 import React from 'react'
-
 import { TabBar } from 'antd-mobile';
+
+import Apply from './apply/Apply';
+import FoundIndex from './found/Found';
 
 class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'Found',
+      selectedTab: 'Apply',
       hidden: false,
       fullScreen: true,
     };
@@ -37,7 +39,6 @@ class Index extends React.Component {
             />
             }
             selected={this.state.selectedTab === 'Apply'}
-            // badge={1}
             onPress={() => {
               this.setState({
                 selectedTab: 'Apply',
@@ -64,7 +65,6 @@ class Index extends React.Component {
             }
             title="驾考"
             key="Exam"
-            // badge={'new'}
             selected={this.state.selectedTab === 'Exam'}
             onPress={() => {
               this.setState({
@@ -100,7 +100,7 @@ class Index extends React.Component {
               });
             }}
           >
-            <Found></Found>
+            <FoundIndex></FoundIndex>
           </TabBar.Item>
           <TabBar.Item
             icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}

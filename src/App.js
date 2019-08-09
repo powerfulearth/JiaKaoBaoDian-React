@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Index from './pages/index';
 // import JiaXiaoDetail from './pages/apply/details/jiaxiaoDetail';
 
+import ApplyIndex from './pages/apply/router/applyRouter';
+
+
 import './assets/styles/YoReset.css'
 
 import "./assets/styles/YoReset.css";
@@ -11,13 +14,14 @@ import "./assets/styles/YoReset.css";
 class App extends Component {
   render() {
     return (
-      // <Router>
-      //   <Route path="/apply" exact component={Index} />
-      //   <Route path="/apply/jxdetail/" component={JiaXiaoDetail} /> 
-      // </Router>
-      <Index></Index>
+      <Router>
+        <Route path="/" exact component={Index} />
+        <Route path="/apply" component={ApplyIndex} /> 
+      </Router>
+      // <Index></Index>
     );
   }
+
 }
 
 export default App;
