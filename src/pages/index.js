@@ -2,7 +2,7 @@ import React from 'react'
 import { TabBar } from 'antd-mobile';
 
 import Apply from './apply/Apply';
-import FoundIndex from './found/Found';
+import Found from './found/Found';
 
 class Index extends React.Component {
   constructor(props) {
@@ -92,7 +92,6 @@ class Index extends React.Component {
             }
             title="发现"
             key="Found"
-            dot
             selected={this.state.selectedTab === 'Found'}
             onPress={() => {
               this.setState({
@@ -100,7 +99,7 @@ class Index extends React.Component {
               });
             }}
           >
-            <FoundIndex></FoundIndex>
+            <Found></Found>
           </TabBar.Item>
           <TabBar.Item
             icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}

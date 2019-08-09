@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Index from './pages/index';
-// import JiaXiaoDetail from './pages/apply/details/jiaxiaoDetail';
-
 import ApplyIndex from './pages/apply/router/applyRouter';
 
 
@@ -18,7 +16,6 @@ class App extends Component {
         <Route path="/" exact component={Index} />
         <Route path="/apply" component={ApplyIndex} /> 
       </Router>
-      // <Index></Index>
     );
   }
 
