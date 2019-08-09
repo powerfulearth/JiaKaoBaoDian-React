@@ -107,6 +107,11 @@ const FoundContainer = styled.div`
     }
   }
 
+  .found-context{
+    overflow:hidden;
+    height:100%;
+  }
+
 `
 
 export {

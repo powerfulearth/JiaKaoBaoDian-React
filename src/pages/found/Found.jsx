@@ -55,7 +55,9 @@ class Found extends Component {
                   else if (response) {
                     this.isLoading(false)
                     return (
-                      <FoundItemUI data={response}></FoundItemUI>
+                      <div className="itemsContainer">
+                        <FoundItemUI data={response}></FoundItemUI>
+                      </div>
                     )
                   }
                   else return (<div>页面出现问题</div>)
@@ -71,6 +73,10 @@ class Found extends Component {
   async componentDidMount(){
     new BScroll('.found-nav',{
       scrollX:true,
+      click:true
+    })
+    new BScroll('.found-context',{
+      scrollY:true,
       click:true
     })
 
