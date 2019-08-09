@@ -2,23 +2,11 @@ import React from 'react'
 
 import { TabBar } from 'antd-mobile';
 
-<<<<<<< HEAD
-import Home from './mine/index';
-import Apply from './apply/Apply'
-=======
-import Apply from './apply/Apply';
-import Found from './found/Found';
->>>>>>> master
-
 class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-<<<<<<< HEAD
-      selectedTab: 'blueTab',
-=======
       selectedTab: 'Found',
->>>>>>> master
       hidden: false,
       fullScreen: true,
     };
