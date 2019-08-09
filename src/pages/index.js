@@ -18,7 +18,7 @@ class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'Apply',
+      selectedTab: 'Exam',
       hidden: false,
       fullScreen: true,
     };
@@ -112,7 +112,6 @@ class Index extends React.Component {
             <Found></Found>
           </TabBar.Item>
           <TabBar.Item
-
             icon={
               <div style={{
                 width: '22px',
@@ -129,7 +128,7 @@ class Index extends React.Component {
             }
             title="我的"
             key="Mine"
-            selected={this.state.selectedTab === 'yellowTab'}
+            selected={this.state.selectedTab === 'Mine'}
             onPress={() => {
               this.setState({
                 selectedTab: 'Mine',
