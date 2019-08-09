@@ -4,6 +4,7 @@ import { TabBar } from 'antd-mobile';
 import Apply from './apply/Apply';
 import Found from './found/Found';
 import Exam from './exam/index'
+import Mine from './mine/Mine';
 
 import baoming from '../assets/images/baoming.png'
 import baoming_1 from '../assets/images/baoming_1.png'
@@ -135,7 +136,7 @@ class Index extends React.Component {
               });
             }}
           >
-            <div>我的信息</div>
+            <Mine></Mine>
           </TabBar.Item>
         </TabBar>
       </div>

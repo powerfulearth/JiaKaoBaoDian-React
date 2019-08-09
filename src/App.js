@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Provider } from 'react-redux'
 
-import store from './store/index.'
+import store from './store/index'
 import ApplyIndex from './pages/apply/router/applyRouter';
 import Index from './pages/index';
 import Exam from './pages/exam/Router'
+import MineIndex from './pages/mine/router/MineRouter';
 
 import './assets/styles/YoReset.css'
 
@@ -17,6 +18,7 @@ class App extends Component {
           <Route path="/" exact component={Index} />
           <Route path="/apply" component={ApplyIndex} />
           <Route path="/exam" component={Exam}></Route>
+          <Route path="/mine" component={MineIndex}></Route>
         </Router>
       </Provider>
     );
