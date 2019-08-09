@@ -8,8 +8,7 @@ const StyledTestHeaderContainer = styled.div`
   justify-content: center;
   .back {
     width: .18rem;
-    height: .12rem;
-    line-height: .12rem;
+    line-height: .44rem;
     position: absolute;
     left: .15rem;
     font-weight: bold;
