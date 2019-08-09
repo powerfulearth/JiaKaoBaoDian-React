@@ -1,5 +1,6 @@
 import styled from 'styled-components' 
 
+
 const StyledIndexContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -19,10 +20,7 @@ const StyledIndexContainer = styled.div`
       font-size: .11rem;
       margin: 0 .02rem;
       span {
-        display: inline-block;
-        width: .09rem;
-        height: .05rem;
-        background: #000;
+        font-size: .11rem;
       }
     }
   }

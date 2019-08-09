@@ -24,7 +24,7 @@ class TestPaper extends Component {
     );
   }
 
-  choose(index, answer) {
+  choose(index, answer, id) {
     if(index+1 === answer) {
       this.setState({
         index,

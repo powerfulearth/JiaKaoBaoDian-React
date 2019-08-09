@@ -8,6 +8,7 @@ const StyledTestPaper = styled.div`
     overflow: hidden;
     .container_scroll {
       padding: .24rem 0;
+      box-sizing: border-box;
       .testTitle {
         padding: 0 .15rem;
         .testType {
@@ -175,11 +176,12 @@ const StyledTestBottom = styled.div`
   padding: 0 .15rem;
   .b_left {
     display: flex;
+    align-items: center;
     span {
       display: block;
     }
     .pic {
-      font-size: .15rem;
+      font-size: .18rem;
       margin-right: .06rem;
     }
     .text {
@@ -193,16 +195,22 @@ const StyledTestBottom = styled.div`
     .true, .false {
       display: flex;
       align-items: center;
+      span {
+        display: block;
+      }
       .pic {
-        width: .13rem;
-        height: .13rem;
-        background: #000;
-        color: #fff;
+        color: #1DACF9;
+        font-size: .18rem;
         margin-right: .06rem;
       }
     }
     .true {
       margin-right: .3rem;
+    }
+    .false {
+      .pic {
+        color: #FE4648;
+      }
     }
   }
   .menu {
@@ -213,9 +221,7 @@ const StyledTestBottom = styled.div`
       display: block;
     }
     .pic {
-      width: .13rem;
-      height: .13rem;
-      background: #000;
+      font-size: .18rem;
     }
     .num {
       margin-left: .05rem;

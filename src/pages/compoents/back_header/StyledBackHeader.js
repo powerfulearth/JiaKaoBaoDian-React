@@ -11,10 +11,11 @@ const StyledBackHeaderContainer = styled.div`
   .back {
     width: .18rem;
     height: .12rem;
-    background: #000;
+    line-height: .12rem;
     position: absolute;
-    top: .17rem;
     left: .15rem;
+    font-weight: bold;
+    color: #424242;
   }
 `
 

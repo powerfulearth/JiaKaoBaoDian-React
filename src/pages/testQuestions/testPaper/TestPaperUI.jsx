@@ -10,7 +10,7 @@ export default (props) => {
         <div className="container swiper-container">
           <div className="container_scroll swiper-wrapper">
             {props.list.map(value => (
-              <div className="swiper-slide" key={value.id}>
+              <div id={value.id} className="swiper-slide" key={value.id}>
                 <div className="testTitle">
                   <span className="testType">
                     单选题
@@ -26,7 +26,7 @@ export default (props) => {
                 }
                 <div className="options">
                   {[value.item1, value.item2, value.item3, value.item4].map((item, index) => (
-                    <div className="row" key={index} data-index={index} onTouchEnd={() => { props.choose(index, value.answer) }}>
+                    <div className="row" key={index} data-index={index} onTouchEnd={() => { props.choose(index, value.answer, value.id) }}>
                       <span className="letter">{(() => {
                         switch (index) {
                           case 0: return 'A';
@@ -60,7 +60,7 @@ export default (props) => {
                     <div className="detail">
                       <h3 className="detail_title">试题详解</h3>
                       <p className="detail_content">{value.explains}</p>
-                      <div className="main">
+                      {/* <div className="main">
                         <p className="main_text">考点</p>
                         <p className="main_content">追究责任</p>
                       </div>
@@ -73,7 +73,7 @@ export default (props) => {
                           <p className="probability_text">答错率</p>
                           <p className="probability_num">19.7%</p>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 ) : ''}
@@ -84,20 +84,20 @@ export default (props) => {
       </StyledTestPaper>
       <StyledTestBottom>
         <div className="b_left">
-          <span className="pic">☆</span>
+          <span className="pic iconfont icon-shoucang"></span>
           <span className="text">收藏</span>
         </div>
         <div className="b_right">
           <div className="true">
-            <span className="pic">√</span>
+            <span className="pic iconfont icon-roundcheckfill"></span>
             <span className="num">0</span>
           </div>
           <div className="false">
-            <span className="pic">×</span>
+            <span className="pic iconfont icon-roundclosefill"></span>
             <span className="num">0</span>
           </div>
           <div className="menu">
-            <span className="pic"></span>
+            <span className="pic iconfont icon-caidan"></span>
             <span className="num">
               <i className="done">1</i>
               /

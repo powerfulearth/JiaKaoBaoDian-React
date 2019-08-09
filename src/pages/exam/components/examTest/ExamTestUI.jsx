@@ -15,11 +15,11 @@ class ExamTestUI extends Component {
               <p>全真模拟</p>
               <p>100%仿真</p>
             </div>
-            <div className="swiper-slide" onTouchEnd={()=>(this.props.history.push('/orderPractice'))}>
+            <div className="swiper-slide" onClick={()=>(this.props.history.push('/orderPractice'))}>
               <p>顺序练习</p>
               <p>0/1334</p>
             </div>
-            <div className="swiper-slide" onTouchEnd={()=>(this.props.history.push('/practiceExams'))}>
+            <div className="swiper-slide" onClick={()=>(this.props.history.push('/practiceExams'))}>
               <p>模拟考试</p>
               <p>100%仿真</p>
             </div>

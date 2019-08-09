@@ -7,7 +7,9 @@ const StyledPracticeExams = styled.div`
   header {
     height: .44rem;
     position: relative;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     h3 {
       line-height: .44rem;
       font-size: .18rem;
@@ -15,10 +17,11 @@ const StyledPracticeExams = styled.div`
     .back {
       width: .18rem;
       height: .12rem;
-      background: #000;
+      line-height: .12rem;
       position: absolute;
-      top: .17rem;
       left: .15rem;
+      font-weight: bold;
+      color: #424242;
     }
   }
 `

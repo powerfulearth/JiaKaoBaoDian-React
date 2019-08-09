@@ -8,7 +8,7 @@ class BackHeader extends Component {
     return (
       <StyledBackHeaderContainer>
         <h3>专项练习</h3>
-        <span className="back" onTouchEnd={this.back.bind(this)}></span>
+        <span className="back iconfont icon-jiantoujinggao" onTouchEnd={this.back.bind(this)}></span>
       </StyledBackHeaderContainer>
     )
   }

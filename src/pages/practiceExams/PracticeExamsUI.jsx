@@ -7,7 +7,7 @@ export default (props) => (
   <StyledPracticeExams>
     <header>
       <h3>倒计时 {props.time.minute}:{props.time.second}</h3>
-      <span className="back" onTouchEnd={props.back}></span>
+      <span className="back iconfont icon-jiantoujinggao" onTouchEnd={props.back}></span>
     </header>
     <TestPaper></TestPaper>
   </StyledPracticeExams>
