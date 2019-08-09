@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import {ApplyContainer} from './StyledApply';
+import TopWrap from './topWrap/TopWrap';
+import CenterWrap from './centerWrap/CenterWrap';
+import BottomWrap from './bottomWrap/BottomWrap';
 
 class Apply extends Component {
     render() {
         return (
-            <div>
-                我是Apply
-            </div>
+            <ApplyContainer>
+                <TopWrap></TopWrap>
+                <CenterWrap></CenterWrap>
+                <BottomWrap></BottomWrap>
+            </ApplyContainer>
         );
     }
 }
