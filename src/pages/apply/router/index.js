@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Apply from '../Apply';
+import Apply from '../../index';
 import JiaXiaoDetail from '../details/jiaxiaoDetail';
 
 // import './assets/styles/YoReset.css'

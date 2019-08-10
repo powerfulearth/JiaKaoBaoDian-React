@@ -15,6 +15,62 @@ class Content extends Component {
           <span>查看榜单</span>
           <img src={MoreImg} alt="跟多图标"/>
         </div>
+        <ul>
+          <span></span>
+          <li>班型</li>
+          <li>场地</li>
+        </ul>
+        <div className="classType">
+          <div>
+            <p>
+              <span>C1</span>
+              <span>普通班</span>
+              <span>￥5600</span>
+            </p>
+            <p>  
+              <span>45天拿本</span>
+              <span>班车接送</span>
+              <span>一人一车</span>
+            </p>
+          </div>
+          <a href="#" >
+             免费咨询
+          </a>
+        </div>
+        <div className="classType">
+          <div>
+            <p>
+              <span>C1</span>
+              <span>普通班</span>
+              <span>￥5600</span>
+            </p>
+            <p>  
+              <span>45天拿本</span>
+              <span>班车接送</span>
+              <span>一人一车</span>
+            </p>
+          </div>
+          <a href="#" >
+             免费咨询
+          </a>
+        </div>
+        <div className="classType">
+          <div>
+            <p>
+              <span>C1</span>
+              <span>普通班</span>
+              <span>￥5600</span>
+            </p>
+            <p>  
+              <span>45天拿本</span>
+              <span>班车接送</span>
+              <span>一人一车</span>
+            </p>
+          </div>
+          <a href="#" >
+             免费咨询
+          </a>
+        </div>
       </ContentContainer>
     );
   }
