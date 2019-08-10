@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BScroll from 'better-scroll';
-import { Toast } from 'antd-mobile';
+// import { Toast } from 'antd-mobile';
 import axios from 'axios';
 import { AxiosProvider, Get } from 'react-axios'
 
@@ -49,16 +49,20 @@ class Found extends Component {
                 {(error, response, isLoading, onReload) => {
                   if (error) return (<div>加载出错···</div>)
                   else if (isLoading) {
-                    this.isLoading(true)
                     return (<div></div>)
                   }
                   else if (response) {
-                    this.isLoading(false)
-                    return (
-                      <div className="itemsContainer">
+                    if(response.data.error_code==10012){
+                      return(
+                        <div>今天不能看啦</div>
+                      )
+                    }else{
+                      return (
+                        <div className="itemsContainer">
                         <FoundItemUI data={response}></FoundItemUI>
                       </div>
                     )
+                    }
                   }
                   else return (<div>页面出现问题</div>)
                 }}
@@ -94,13 +98,13 @@ class Found extends Component {
     })
   }
 
-  isLoading(isShow){
-    if(isShow){
-      Toast.loading('加载中···', 0, false)
-    }else{
-      Toast.hide()
-    }
-  }
+  // isLoading(isShow){
+  //   if(isShow){
+  //     Toast.loading('加载中···', 0, false)
+  //   }else{
+  //     Toast.hide()
+  //   }
+  // }
 
 }
 
