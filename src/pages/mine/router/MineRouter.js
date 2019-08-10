@@ -8,10 +8,7 @@ class MineRouter extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Switch>
-          <Route path="/mine" component={Mine}></Route>
-          <Route path="/mine/login" exact component={Login}></Route>
-        </Switch>
+        <Route path="/mine/login" exact component={Login}></Route>
       </BrowserRouter>
     );
   }
