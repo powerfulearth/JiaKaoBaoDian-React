@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
+import sprite from 'assets/images/wsl/sprite.png'
 import Bg from 'assets/images/wsl/bg.png'
 import userIcon from 'assets/images/wsl/user-icon.png'
-import lock from 'assets/images/wsl/lock.png'
 import getToken from 'assets/images/wsl/get-token.png'
-import agree from 'assets/images/wsl/agree.png'
 import loginBtn from 'assets/images/wsl/login-btn.png'
 import wechat from 'assets/images/wsl/wechat.png'
 
@@ -84,9 +83,6 @@ const LoginContent = styled.div`
       display: flex;
       justify-content: center;
       height: .25rem;
-      background: url(${lock}) no-repeat;
-      background-size: .2rem .22rem;
-      padding-left: .35rem;
       margin-bottom: .25rem;
       ::after {
         content: "";
@@ -97,10 +93,19 @@ const LoginContent = styled.div`
         border: .005rem solid #eee;
       }
 
+      i {
+        background: url(${sprite}) -189px -50px no-repeat;
+        width: .22rem;
+        height: .26rem;
+      /* background-size: .2rem .22rem; */
+      }
+
       > input {
         width: calc(100% - 1.01rem);
+        height: 100%;
         border: none;
         margin-right: .08rem;
+        padding-left: .1rem;
         outline: none;
       }
 
@@ -130,7 +135,7 @@ const LoginContent = styled.div`
     display: inline-block;
     width: .125rem;
     height: .125rem;
-    background: url(${agree}) no-repeat;
+    background: url(${sprite}) -50px -36px no-repeat;
     background-size: 100%;
     margin: 0 .035rem 0 .012rem;
   }

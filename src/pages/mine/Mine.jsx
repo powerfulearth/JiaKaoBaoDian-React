@@ -10,19 +10,15 @@ class index extends Component {
   render() {
     return (
       <MineContainer>
-        <div className="main-container">
-          <div>
-            <img src={avatar}  alt=""/>
-            <dl>
-              <dt>马上登陆</dt>
-              <dd>立即预测考试通过率</dd>
-            </dl>
-          </div>
-          <div>
-            <dl>
-              <dt>名师课程</dt>
-              <dd>精编试题</dd>
-            </dl>
+        <div className="login">
+          <div className="main-container">
+            <div>
+              <img src={avatar}  alt=""/>
+              <dl>
+                <dt>马上登陆</dt>
+                <dd>立即预测考试通过率</dd>
+              </dl>
+            </div>
           </div>
         </div>
         <div className="theory">
@@ -56,45 +52,56 @@ class index extends Component {
           </div>
           </div>
         </div>
-        <div className="driving">
+        <div className="exam-wrap">
           <div className="wrapper">
-            <div className="driving-head">
-            <div className="driving-head-left">
-              <h4>驾校</h4>
-              <div>未报考驾校</div>
-            </div>
-            <div className="driving-head-right">绑定驾校<span>></span></div>
-            </div>
-            <ul className="driving-main">
-              <li>
-                <a href="##">
-                  <i></i>
-                  <span>帮我选驾校</span>
-                </a>
-              </li>
-              <li>
-                <a href="##">
-                  <i></i>
-                  <span>学车优惠</span>
-                </a>
-              </li>
-              <li>
-                <a href="##">
-                  <i></i>
-                  <span>好友驾校</span>
-                </a>
-              </li>
-              <li>
-                <a href="##">
-                  <i></i>
-                  <span>在线约课</span>
-                </a>
-              </li>
+            <ul className="row-1">
+              <li><i className="err"></i><span>我的错题</span></li>
+              <li><i className="star"></i><span>我的收藏</span></li>
+              <li><i className="sync"></i><span>同步数据</span></li>
+              <li><i className="change  "></i><span>切换题库</span></li>
+            </ul>
+            <ul className="row-2">
+              <li><i className="history"></i><span>浏览记录</span></li>
+              <li><i className="mypub "></i><span>我的发表</span></li>
+              <li><i className="help"></i><span>陪练服务</span></li>
+              <li><i className="mycore"></i><span>我的成绩</span></li>
             </ul>
           </div>
         </div>
-        
-      
+        <div className="info-item">
+          <ul className="info-top">
+            <li><span><i></i>我的订单</span><i></i></li>
+            <li><span><i></i>我的订阅</span><i></i></li>
+          </ul>
+          <ul className="info-bottom">
+            <li><span><i></i>题库设置</span><i></i></li>
+            <li><span><i></i>推荐朋友</span><i></i></li>
+            <li><span><i></i>帮助与反馈</span><i></i></li>
+            <li><span><i></i>我的设置</span><i></i></li>
+          </ul>
+        </div>
+        <div className="share">
+          <p><span className="left"></span> 推荐宝典给好友 <span className="right"></span></p>
+          <ul>
+            <li>
+              <i></i>
+              <p>微信好友</p>
+            </li>
+            <li>
+              <i></i>
+              <p>朋友圈</p>
+            </li>
+            <li>
+              <i></i>
+              <p>QQ好友</p>
+            </li>
+            <li>
+              <i></i>
+              <p>QQ空间</p>
+            </li>
+          </ul>
+          <p>选驾校 考驾照 就用驾考宝典</p>
+        </div>
       </MineContainer>
     );
   }
