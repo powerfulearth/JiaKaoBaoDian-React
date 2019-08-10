@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
+import Sprite from 'assets/images/wsl/sprite.png'
 import Bg from 'assets/images/wsl/bg.png'
 import userIcon from 'assets/images/wsl/user-icon.png'
-import lock from 'assets/images/wsl/lock.png'
 import getToken from 'assets/images/wsl/get-token.png'
-import agree from 'assets/images/wsl/agree.png'
 import loginBtn from 'assets/images/wsl/login-btn.png'
 import wechat from 'assets/images/wsl/wechat.png'
 
@@ -84,9 +83,6 @@ const LoginContent = styled.div`
       display: flex;
       justify-content: center;
       height: .25rem;
-      background: url(${lock}) no-repeat;
-      background-size: .2rem .22rem;
-      padding-left: .35rem;
       margin-bottom: .25rem;
       ::after {
         content: "";
@@ -96,11 +92,16 @@ const LoginContent = styled.div`
         bottom: 0;
         border: .005rem solid #eee;
       }
-
+      > i {
+        display: inline-block;
+        width: .22rem;
+        height: .25rem;
+        background: url(${Sprite}) -190px -50px no-repeat;
+      }
       > input {
         width: calc(100% - 1.01rem);
         border: none;
-        margin-right: .08rem;
+        margin: 0 .08rem 0 .15rem;
         outline: none;
       }
 
@@ -125,19 +126,21 @@ const LoginContent = styled.div`
   height: .15rem;
   font-size: .1rem;
   color: #a7a7a7;
-
-  i {
-    display: inline-block;
-    width: .125rem;
-    height: .125rem;
-    background: url(${agree}) no-repeat;
-    background-size: 100%;
-    margin: 0 .035rem 0 .012rem;
+  > p {
+    display: flex;
+    justify-content: center;
+    i {
+      width: .125rem;
+      height: .125rem;
+      background: url(${Sprite}) -50px -35px no-repeat;
+      margin: 0 .035rem 0 .012rem;
+    }
   }
 
   >span {
-    color: #ff5500;
-  }
+      color: #ff5500;
+    }
+  
   }
 
   > div:nth-child(4) {

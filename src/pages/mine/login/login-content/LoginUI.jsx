@@ -19,7 +19,7 @@ export default (props) => {
             <input type="text"/>
           </div>
           <div>
-            <input type="text"/> | <span>获取验证码</span>
+            <i></i><input type="text"/> | <span>获取验证码</span>
           </div>
         </div>
         <div>
