@@ -81,8 +81,8 @@ class index extends Component {
           </ul>
         </div>
         <div className="share">
-          <p><span className="left"></span> 推荐宝典给好友 <span className="right"></span></p>
-          <ul>
+          <p className="share-title"><span className="left"></span><span className="middle">推荐宝典给好友</span><span className="right"></span></p>
+          <ul className="share-item">
             <li>
               <i></i>
               <p>微信好友</p>
@@ -100,7 +100,7 @@ class index extends Component {
               <p>QQ空间</p>
             </li>
           </ul>
-          <p>选驾校 考驾照 就用驾考宝典</p>
+          <p className="foot-info">选驾校 考驾照 就用驾考宝典</p>
         </div>
       </MineContainer>
     );

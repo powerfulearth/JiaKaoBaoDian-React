@@ -9,6 +9,7 @@ const MineContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #f2f2f2;
   overflow-y: scroll;
   > div:first-child {
     position: relative;
@@ -271,10 +272,77 @@ const MineContainer = styled.div`
     }
   }
   > div:nth-of-type(5) {
-    > .title {
+    width: 100%;
+    background: #fff;
+    > .share-title {
       display: flex;
-      
       font-size: .15rem;
+      margin: .23rem .08rem;
+      > .middle {
+        padding: 0 .09rem;
+      }
+      > .left,
+      .right{
+        flex-grow: 1;
+        position: relative;
+        height: .04rem;
+        border-top: .005rem dashed #eee;
+        margin-top: .09rem;
+        ::after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          width: 35%;
+          height: .03rem;
+          border-bottom: .005rem dashed #eee;
+        }
+        
+      }
+      > .left {
+          ::after {
+            right: 0;
+          }
+        }
+    }
+
+    > .share-item {
+      display: flex;
+      justify-content: space-around;
+      padding: .16rem 0;
+      > li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;        i {
+          width: .29rem;
+          height: .23rem;
+          margin: .08rem 0 .2rem;
+          line-height: .3rem;
+          background: url(${sprite}) -269px -50px no-repeat;
+        }
+        p {
+
+        }
+      }
+      > li:nth-of-type(2) i {
+        height: .26rem;
+        background-position: -274px 0;
+      }
+      > li:nth-of-type(3) i {
+        width: .26rem;
+        height: .30rem;
+        background-position: -222px 0;
+      }
+      > li:nth-of-type(4) i {
+        height: .30rem;
+        background-position: -193px 0;
+      }
+    }
+
+    > .foot-info {
+      margin: .33rem 0;
+      color: #d5d5d5;
+      text-align: center;
     }
   }
 `
