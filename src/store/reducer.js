@@ -1,11 +1,13 @@
-import { combineReducers } from 'redux-immutable'
+import {
+  combineReducers
+} from 'redux'
 
-// import { reducer as foodlist } from 'cookbook/swiper/'
-// import { reducer as menulist } from 'cookbook/hot-categories/'
+import { reducer as testPaper } from '../pages/exam/testQuestions/testPaper/reducer'
+import { reducer as testHeader } from '../pages/exam/testQuestions/testHeader/reducer'
 
 const reducer = combineReducers({
-  // foodlist,
-  // menulist
+  testPaper,
+  testHeader
 })
 
 export default reducer

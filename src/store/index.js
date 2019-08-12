@@ -1,14 +1,12 @@
-import {
+import { 
   createStore,
-  applyMiddleware
+  applyMiddleware 
 } from 'redux'
-
-import { Map } from 'immutable'
 
 import Thunk from 'redux-thunk'
 
 import reducer from './reducer'
 
-const store = createStore(reducer, Map({}), applyMiddleware(Thunk))
+const store = createStore(reducer, applyMiddleware(Thunk))
 
 export default store

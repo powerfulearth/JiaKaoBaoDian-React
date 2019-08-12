@@ -21,9 +21,9 @@ body,
   display: none; }
 
 html {
-  background-color: #EFEFF4;
-  color: #212121;
-  font-size: 26.66667vw;
+  background-color: #ffffff;
+  color: #131313;
+  font-size: 26.66666667vw;
   -webkit-user-select: none;
   user-select: none; }
 
@@ -31,7 +31,8 @@ body {
   margin: 0;
   font-size: 0.14em;
   line-height: 1.5;
-  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }
+  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;
+  background-color: #ffffff; }
 
 ul,
 ol,
