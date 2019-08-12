@@ -1,9 +1,10 @@
 import React from 'react'
-
 import { TabBar } from 'antd-mobile';
 
-import Home from './mine/index';
+import Apply from './apply/Apply';
+import Found from './found/Found';
 import Exam from './exam/index'
+import Mine from './mine/Mine';
 
 import baoming from '../assets/images/baoming.png'
 import baoming_1 from '../assets/images/baoming_1.png'
@@ -18,7 +19,7 @@ class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'redTab',
+      selectedTab: 'Mine',
       hidden: false,
       fullScreen: true,
     };
@@ -34,8 +35,8 @@ class Index extends React.Component {
           hidden={this.state.hidden}
         >
           <TabBar.Item
-            title="Life"
-            key="Life"
+            title="报名"
+            key="Apply"
             icon={<div style={{
               width: '22px',
               height: '22px',
@@ -48,16 +49,15 @@ class Index extends React.Component {
               background: `url(${baoming_1}) center center /  21px 21px no-repeat` }}
             />
             }
-            selected={this.state.selectedTab === 'blueTab'}
-            // badge={1}
+            selected={this.state.selectedTab === 'Apply'}
             onPress={() => {
               this.setState({
-                selectedTab: 'blueTab',
+                selectedTab: 'Apply',
               });
             }}
             data-seed="logId"
           >
-            <div>报名</div>
+            <Apply></Apply>
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -74,13 +74,12 @@ class Index extends React.Component {
                 background: `url(${jiakao_1}) center center /  21px 21px no-repeat` }}
               />
             }
-            title="Koubei"
-            key="Koubei"
-            // badge={'new'}
-            selected={this.state.selectedTab === 'redTab'}
+            title="驾考"
+            key="Exam"
+            selected={this.state.selectedTab === 'Exam'}
             onPress={() => {
               this.setState({
-                selectedTab: 'redTab',
+                selectedTab: 'Exam',
               });
             }}
             data-seed="logId1"
@@ -102,17 +101,16 @@ class Index extends React.Component {
                 background: `url(${faxian_1}) center center /  21px 21px no-repeat` }}
               />
             }
-            title="Friend"
-            key="Friend"
-            dot
-            selected={this.state.selectedTab === 'greenTab'}
+            title="发现"
+            key="Found"
+            selected={this.state.selectedTab === 'Found'}
             onPress={() => {
               this.setState({
-                selectedTab: 'greenTab',
+                selectedTab: 'Found',
               });
             }}
           >
-            <div>买车？？</div>
+            <Found></Found>
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -129,16 +127,16 @@ class Index extends React.Component {
                 background: `url(${wode_1}) center center /  21px 21px no-repeat` }}
               />
             }
-            title="My"
-            key="my"
-            selected={this.state.selectedTab === 'yellowTab'}
+            title="我的"
+            key="Mine"
+            selected={this.state.selectedTab === 'Mine'}
             onPress={() => {
               this.setState({
-                selectedTab: 'yellowTab',
+                selectedTab: 'Mine',
               });
             }}
           >
-            <Home></Home>
+            <Mine></Mine>
           </TabBar.Item>
         </TabBar>
       </div>

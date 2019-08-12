@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import StyledLogin from './StyledLogin';
+import LoginContent from './login-content/LoginContent'
 
-class Login extends Component {
+export default class Login extends Component {
   render() {
     return (
-      <StyledLogin>
-
-      </StyledLogin>
-    );
+      <>
+        <LoginContent></LoginContent>
+      </>
+    )
   }
 }
-
-export default Login;
