@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import sprite from 'assets/images/wsl/sprite.png'
-import Bg from 'assets/images/wsl/bg.png'
+import sprite from 'assets/images/mine/sprite.png'
+import Bg from 'assets/images/mine/bg.png'
 
 const MineContainer = styled.div`
   width: 100%;
@@ -31,7 +31,7 @@ const MineContainer = styled.div`
       box-shadow: 0 1px 10px #e3e3e3;
       > div:first-child {
         display: flex;
-        > img {
+        img {
           width: .55rem;
           height: .55rem;
           border-radius: 50%;
@@ -286,7 +286,7 @@ const MineContainer = styled.div`
         flex-grow: 1;
         position: relative;
         height: .04rem;
-        border-top: .005rem dashed #eee;
+        border-top: .01rem dashed #eee;
         margin-top: .09rem;
         ::after {
           content: "";
