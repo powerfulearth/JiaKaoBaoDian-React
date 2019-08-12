@@ -19,7 +19,7 @@ class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'Mine',
+      selectedTab: 'Exam',
       hidden: false,
       fullScreen: true,
     };

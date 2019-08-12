@@ -25,7 +25,6 @@ class index extends Component {
   }
   render() {
     return (
-      <>
         <StyledIndexContainer>
           <header>
             <h3>驾考宝典</h3>
@@ -54,8 +53,9 @@ class index extends Component {
             </div>
           </Tabs>
         </StyledIndexContainer>
-      </>
     )
+  }
+  componentDidMount(){
   }
 }
 
