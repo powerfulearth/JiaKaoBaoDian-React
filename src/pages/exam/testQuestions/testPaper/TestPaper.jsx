@@ -13,7 +13,7 @@ class TestPaper extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      examList: []
+      examList: [],
     }
   }
   render() {
@@ -44,20 +44,30 @@ class TestPaper extends Component {
       }
       this.props.false(select)
     }
-    
     setTimeout(() => {
-      console.log(localStorage.getItem("orderExam"))
-      this.state.orderExam.push(this.props.select)
-      localStorage.setItem("orderExam", JSON.stringify(this.state.orderExam))
+      if(!localStorage.getItem('orderExam')) {
+        let arr = []
+        arr.push(this.props.select)
+        localStorage.setItem('orderExam', JSON.stringify(arr))
+      } else {
+        let arr = JSON.parse(localStorage.getItem('orderExam'))
+        let _index = arr.findIndex(item => {
+          return item.id == this.props.select.id
+        });
+        if(_index === -1) {
+          arr.push(this.props.select)
+          localStorage.setItem('orderExam', JSON.stringify(arr))
+        }
+      }
+      document.querySelector("#'1-1'")
     },200)
     
   }
 
   async componentDidMount() {
-    console.log(this.props);
     let that = this
     let index = 0
-    let result = await http('https://api.myjson.com/bins/e2smr')
+    let result = await http('https://api.myjson.com/bins/10lkzb')
     this.setState({
       examList: result.slice(0,3)
     })

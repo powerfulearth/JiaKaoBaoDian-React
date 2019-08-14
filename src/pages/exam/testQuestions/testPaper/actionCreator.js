@@ -18,7 +18,7 @@ const falseSelect = (select, orderExam) => ({
 
 const asyncLoadData = () => {
   return (dispatch) => {
-    fetch('https://api.myjson.com/bins/e2smr')
+    fetch('https://api.myjson.com/bins/10lkzb')
       .then(response => response.json())
       .then(result => {
         dispatch(syncLoadData(result.data))

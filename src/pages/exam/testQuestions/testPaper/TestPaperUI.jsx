@@ -27,17 +27,12 @@ export default (props) => {
                 <div className="options">
                   {[value.item1, value.item2, value.item3, value.item4].map((item, index) => (
                     <div className="row" key={index} data-index={index} onTouchEnd={() => { props.choose(index, value.id, value.answer, value.chapter) }}>
-                      
-                        <span className="letter">{(() => {
+                        {(() => {
                           switch (index) {
-                            case 0: return 'A';
-                            case 1: return 'B';
-                            case 2: return 'C';
-                            case 3: return 'D';
+                            case index: return <span className="letter">A</span>
                             default: break;
                           }
-                        })()}</span>
-
+                        })()}
                       <span className="content">{item}</span>
                     </div>
                   ))}
