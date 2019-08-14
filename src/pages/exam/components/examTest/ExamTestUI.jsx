@@ -17,7 +17,7 @@ function ExamTestUI(props) {
             <p>顺序练习</p>
             <p>0/1334</p>
           </Link>
-          <Link className="swiper-slide" to={`/exam/orderPractice/${props.currentPage}/TEST_PAGE_SIMULATEEXAM`}>
+          <Link className="swiper-slide" to={`/exam/practiceExams/${props.currentPage}/TEST_PAGE_SIMULATEEXAM`}>
             <p>模拟考试</p>
             <p>100%仿真</p>
           </Link>

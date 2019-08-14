@@ -7,15 +7,9 @@ import { headerTab } from './actionCreator'
 import TestHeaderUI from './TestHeaderUI.jsx'
 
 class TestHeader extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isTab: 1
-    }
-  }
   render() {
     return (
-      <TestHeaderUI { ...this.props } isTab={this.state.isTab} back={this.back.bind(this)} tab={this.tab.bind(this)}>
+      <TestHeaderUI { ...this.props }  back={this.back.bind(this)} tab={this.tab.bind(this)}>
       </TestHeaderUI>
     )
   }
@@ -25,12 +19,7 @@ class TestHeader extends Component {
   }
 
   tab(isTab) {
-    setTimeout(() => {
-      this.setState({
-        isTab
-      })
-      this.props.tab(this.state.isTab)
-    }, 0)
+    this.props.tab(isTab)
   }
 
   componentDidMount() {
@@ -39,13 +28,14 @@ class TestHeader extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  _isTab: state.testHeader._isTab
+  isTab: state.testHeader.isTab
 })
 
 const mapDispatch = (dispatch) => ({
-  tab(_isTab) {
-    dispatch(headerTab(_isTab))
+  tab(isTab) {
+    dispatch(headerTab(isTab))
   }
 })
+
 
 export default connect(mapStateToProps, mapDispatch)(withRouter(TestHeader));
