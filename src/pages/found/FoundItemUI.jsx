@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 function FoundItemUI (props)  {
   const data = props.data.data.result.data
@@ -14,7 +14,7 @@ function FoundItemUI (props)  {
               <div className="date">{value.date}</div>
             </div>
           </div>
-          <div className="pic"><img src={value.thumbnail_pic_s}/></div>
+          <div className="pic"><img src={value.thumbnail_pic_s} alt="" /></div>
         </a>
       )
     })

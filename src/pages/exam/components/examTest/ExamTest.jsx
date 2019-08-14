@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
-// import { withRouter } from 'react-router-dom' 
+import { connect } from 'react-redux';
 
 import ExamTestUI from './ExamTestUI'
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.css'
 
+const mapState = (state) => ({
+  currentPage:state.indexReducer.currentPage,
+})
+
+const mapDispatch = (dispatch) => ({
+  
+})
+
+
 class ExamTest extends Component {
   render() {
     return (
-      <ExamTestUI>
+      <ExamTestUI {...this.props}>
         
       </ExamTestUI>
     );
@@ -24,4 +33,4 @@ class ExamTest extends Component {
   }
 }
 
-export default ExamTest
+export default connect(mapState,mapDispatch)(ExamTest)

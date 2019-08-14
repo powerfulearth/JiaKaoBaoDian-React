@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import { asyncLoadData } from './actionCreator'
+// import { withRouter } from 'react-router-dom';
 
 import TestPaperUI from './TestPaperUI'
+import { TEST_PAGE_ORDER,TEST_PAGE_SIMULATEEXAM,TEST_PAGE_ALLSIMULATE } from './actionTypes'
 
 import bScroll from 'better-scroll'
 import Swiper from 'swiper'
@@ -13,12 +15,13 @@ class TestPaper extends Component {
     super(props)
     this.state = {
       index: '',
-      isRight: ''
+      isRight: '',
+      type:""
     }
   }
   render() {
     return (
-      <TestPaperUI { ...this.props } choose={this.choose.bind(this)} index={this.state.index} isRight={this.state.isRight}>
+      <TestPaperUI { ...this.props }  choose={this.choose.bind(this)} index={this.state.index} isRight={this.state.isRight}>
 
       </TestPaperUI>
     );
@@ -46,8 +49,20 @@ class TestPaper extends Component {
       observer:true,//修改swiper自己或子元素时，自动初始化swiper
       observeParents:false,//修改swiper的父元素时，自动初始化swiper
     })
+    
+    if(this.props.match.params){
+      this.setState({
+        type:this.props.match.params.type
+      })
+      this.props.loadData(this.props.match.params.type)
+    }
   }
 
+  componentWillUnmount(){
+    console.log("答题界面卸载");
+    this.props.loadData("")
+  }
+    
 }
 
 
@@ -56,7 +71,9 @@ const mapState = state =>({
   _isTab: state.testHeader._isTab
 })
 const mapDispatch = dispatch => ({
-  loadData: dispatch(asyncLoadData())
+  loadData(type){
+    dispatch(asyncLoadData(type))
+  }
 })
 
-export default connect(mapState, mapDispatch)(TestPaper);
+export default connect(mapState, mapDispatch)(TestPaper)

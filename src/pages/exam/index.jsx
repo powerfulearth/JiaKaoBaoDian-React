@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Tabs } from 'antd-mobile';
+import {connect} from 'react-redux';
+
+import { change } from './indexActionCreater';
 
 import { StyledIndexContainer } from './StyledIndex.js'
 
@@ -9,6 +12,18 @@ import Two from './two/Two'
 import Three from './three/Three'
 import Four from './four/Four'
 import TakeThis from './takeThis/TakeThis'
+
+const mapState =(state) => {
+  return{
+    currentPage:state.currentPage
+  }
+}
+
+const mapDispatch = (dispatch) => ({
+  changePage(info,changeTO){
+    dispatch(change(info,changeTO))
+  }
+})
 
 class index extends Component {
   constructor(props) {
@@ -20,9 +35,11 @@ class index extends Component {
         { title: "科三" },
         { title: "科四" },
         { title: "拿本" },
-      ]
+      ],
+      currentPage:0
     }
   }
+
   render() {
     return (
         <StyledIndexContainer>
@@ -35,6 +52,7 @@ class index extends Component {
           </header>
           <Tabs tabs={this.state.tabs}
             initialPage={0}
+            onChange={this.props.changePage}
           >
             <div>
               <One></One>
@@ -59,4 +77,4 @@ class index extends Component {
   }
 }
 
-export default index;
+export default connect(mapState,mapDispatch)(index)

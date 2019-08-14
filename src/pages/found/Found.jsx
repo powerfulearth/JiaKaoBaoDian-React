@@ -4,7 +4,7 @@ import BScroll from 'better-scroll';
 import axios from 'axios';
 import { AxiosProvider, Get } from 'react-axios'
 
-import {FoundContainer} from './StyledFound';
+import { FoundContainer } from './StyledFound';
 import FoundItemUI from './FoundItemUI';
 
 const axiosInstance = axios.create({
@@ -16,10 +16,10 @@ const axiosInstance = axios.create({
 
 class Found extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
-      type:"top"
+      type: "top"
     }
   }
 
@@ -52,16 +52,16 @@ class Found extends Component {
                     return (<div></div>)
                   }
                   else if (response) {
-                    if(response.data.error_code==10012){
-                      return(
+                    if (response.data.error_code === 10012) {
+                      return (
                         <div>今天不能看啦</div>
                       )
-                    }else{
+                    } else {
                       return (
                         <div className="itemsContainer">
-                        <FoundItemUI data={response}></FoundItemUI>
-                      </div>
-                    )
+                          <FoundItemUI data={response}></FoundItemUI>
+                        </div>
+                      )
                     }
                   }
                   else return (<div>页面出现问题</div>)
@@ -74,27 +74,27 @@ class Found extends Component {
     );
   }
 
-  async componentDidMount(){
-    new BScroll('.found-nav',{
-      scrollX:true,
-      click:true
+  async componentDidMount() {
+    new BScroll('.found-nav', {
+      scrollX: true,
+      click: true
     })
-    new BScroll('.found-context',{
-      scrollY:true,
-      click:true
+    new BScroll('.found-context', {
+      scrollY: true,
+      click: true
     })
 
   }
 
-  active(e){
+  active(e) {
     // console.log(e.target.parentElement.parentElement.children);
     Array.from(e.target.parentElement.parentElement.children).forEach((ele) => {
-      ele.setAttribute('class','')
+      ele.setAttribute('class', '')
     })
-    e.target.parentElement.setAttribute('class','active')
+    e.target.parentElement.setAttribute('class', 'active')
     console.log(e.target.parentElement.getAttribute('type'));
     this.setState({
-      type:e.target.parentElement.getAttribute('type')
+      type: e.target.parentElement.getAttribute('type')
     })
   }
 
