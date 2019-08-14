@@ -4,7 +4,7 @@ import Tabbar from '../tabbar/Tabbar'
 import LoginAccount from '../main/AccountLogin/LoginAccount'
 
 
-import { Link, Route } from "react-router-dom";
+// import { Link, Route } from "react-router-dom";
 
 import { LoginContainer, LoginContent } from './StyledLoginContent'
 

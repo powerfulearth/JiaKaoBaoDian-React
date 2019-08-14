@@ -16,7 +16,14 @@ const LoginPhoneContainer = styled.div`
     text-align: center;
     width: 2.42rem;
     color: #a7a7a7;
-
+    > div {
+      > .hint {
+        position: absolute;
+        top: 100%;
+        font-size: .1rem;
+        color: #ff5500;
+      } 
+    }
     > div:first-child {
       position: relative;
       display: flex;
@@ -87,8 +94,14 @@ const LoginPhoneContainer = styled.div`
     i {
       width: .125rem;
       height: .125rem;
-      background: url(${Sprite}) -50px -35px no-repeat;
+      background: url(${Sprite}) no-repeat;
       margin: 0 .035rem 0 .012rem;
+    }
+    i.yes {
+      background-position: -50px -35px;
+    }
+    i.no {
+      background-position: -62px -35px;
     }
   }
 
