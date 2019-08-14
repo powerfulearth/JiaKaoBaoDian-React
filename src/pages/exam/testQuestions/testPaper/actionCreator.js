@@ -1,13 +1,24 @@
-import { TEST_PAGE } from './actionTypes'
+import { TEST_PAGE, TRUE, FALSE } from './actionTypes'
 
 const syncLoadData = list => ({
   type: TEST_PAGE,
   list
 })
 
+const trueSelect = (select, orderExam) => ({
+  type: TRUE,
+  select,
+  orderExam
+})
+const falseSelect = (select, orderExam) => ({
+  type: FALSE,
+  select,
+  orderExam
+})
+
 const asyncLoadData = () => {
   return (dispatch) => {
-    fetch('https://api.myjson.com/bins/126abx')
+    fetch('https://api.myjson.com/bins/e2smr')
       .then(response => response.json())
       .then(result => {
         dispatch(syncLoadData(result.data))
@@ -17,5 +28,7 @@ const asyncLoadData = () => {
 
 export {
   syncLoadData,
-  asyncLoadData
+  asyncLoadData,
+  trueSelect,
+  falseSelect
 }

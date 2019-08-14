@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 function FoundItemUI (props)  {
   const data = props.data.data.result.data
