@@ -4,6 +4,7 @@ import { StyledTestHeaderContainer } from './StyledTestHeader'
 
 export default (props) => (
   <StyledTestHeaderContainer>
+    {console.log(props.isTab)}
     <div className="back iconfont icon-jiantoujinggao" onTouchEnd={props.back}></div>
     <div className="tab">
       <div className={"left" + (props.isTab === 1 ? ' active' : '')} onTouchEnd={props.tab.bind('', 1)}>

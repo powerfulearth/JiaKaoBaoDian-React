@@ -1,4 +1,4 @@
-import { TEST_PAGE_ORDER,TEST_PAGE_SIMULATEEXAM,TEST_PAGE_ALLSIMULATE } from './actionTypes'
+import { TEST_PAGE_ORDER,TEST_PAGE_SIMULATEEXAM,TEST_PAGE_ALLSIMULATE, TRUE, FALSE } from './actionTypes'
 
 const syncLoadData = (type,list) => ({
   type,
@@ -24,6 +24,19 @@ const asyncLoadData = (type) => {
   }
 }
 
+const trueSelect = (select, orderExam) => ({
+  type: TRUE,
+  select,
+  orderExam
+})
+const falseSelect = (select, orderExam) => ({
+  type: FALSE,
+  select,
+  orderExam
+})
+
 export {
-  asyncLoadData
+  asyncLoadData,
+  trueSelect,
+  falseSelect
 }
