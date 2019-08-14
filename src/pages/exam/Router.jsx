@@ -11,7 +11,7 @@ class Routers extends Component {
       <Router>
         <Route path="/exam/specialTest" component={SpecialTest}></Route>
         <Route path="/exam/orderPractice/:page" component={TestQuestions}></Route>
-        <Route path="/exam/practiceExams" component={PracticeExams}></Route>
+        <Route path="/exam/practiceExams/:page" component={PracticeExams}></Route>
       </Router>
     );
   }
