@@ -1,0 +1,126 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": [
+    {
+      "id": "2-1",
+      "question": "驾驶机动车在道路上2-1",
+      "answer": 2,
+      "item1": "选项A",
+      "item2": "选项B",
+      "item3": "选项C",
+      "item4": "选项D",
+      "explains": "题目正确解释",
+      "url": "",
+      "chapter": 2
+    },
+    {
+      "id": "2-2",
+      "question": "驾驶机动车在道路上2-2",
+      "answer": 1,
+      "item1": "选项A",
+      "item2": "选项B",
+      "item3": "选项C",
+      "item4": "选项D",
+      "explains": "题目正确解释",
+      "url": "",
+      "chapter": 2
+    },
+    {
+      "id": "2-3",
+      "question": "驾驶机动车在道路上2-3",
+      "answer": 4,
+      "item1": "选项A",
+      "item2": "选项B",
+      "item3": "选项C",
+      "item4": "选项D",
+      "explains": "题目正确解释",
+      "url": "",
+      "chapter": 2
+    },
+    {
+      "id": "2-4",
+      "question": "驾驶机动车在道路上2-4",
+      "answer": 2,
+      "item1": "选项A",
+      "item2": "选项B",
+      "item3": "选项C",
+      "item4": "选项D",
+      "explains": "题目正确解释",
+      "url": "",
+      "chapter": 2
+    },
+    {
+      "id": "2-5",
+      "question": "驾驶机动车在道路上2-5",
+      "answer": 1,
+      "item1": "选项A",
+      "item2": "选项B",
+      "item3": "选项C",
+      "item4": "选项D",
+      "explains": "题目正确解释",
+      "url": "",
+      "chapter": 2
+    },
+    {
+      "id": "2-6",
+      "question": "驾驶机动车在道路上2-6",
+      "answer": 1,
+      "item1": "选项A",
+      "item2": "选项B",
+      "item3": "选项C",
+      "item4": "选项D",
+      "explains": "题目正确解释",
+      "url": "",
+      "chapter": 2
+    },
+    {
+      "id": "2-7",
+      "question": "驾驶机动车在道路上2-7",
+      "answer": 1,
+      "item1": "选项A",
+      "item2": "选项B",
+      "item3": "选项C",
+      "item4": "选项D",
+      "explains": "题目正确解释",
+      "url": "",
+      "chapter": 2
+    },
+    {
+      "id": "2-8",
+      "question": "驾驶机动车在道路上2-8",
+      "answer": 1,
+      "item1": "选项A",
+      "item2": "选项B",
+      "item3": "选项C",
+      "item4": "选项D",
+      "explains": "题目正确解释",
+      "url": "",
+      "chapter": 2
+    },
+    {
+      "id": "2-9",
+      "question": "驾驶机动车在道路上2-9",
+      "answer": 1,
+      "item1": "选项A",
+      "item2": "选项B",
+      "item3": "选项C",
+      "item4": "选项D",
+      "explains": "题目正确解释",
+      "url": "",
+      "chapter": 2
+    },
+    {
+      "id": "2-10",
+      "question": "驾驶机动车在道路上2-10",
+      "answer": 1,
+      "item1": "选项A",
+      "item2": "选项B",
+      "item3": "选项C",
+      "item4": "选项D",
+      "explains": "题目正确解释",
+      "url": "",
+      "chapter": 2
+    }
+  ]
+}

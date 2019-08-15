@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-
+import { Provider } from 'react-redux'
+import store from './store/index'
 import Index from './pages/index';
 import Apply from './pages/apply/router/applyRouter'
+import Exam from './pages/exam/Router'
+import MineIndex from './pages/mine/router/MineRouter';
 
 import './assets/styles/YoReset.css'
 
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Route path="/" exact component={Index} /> 
-        <Route path="/apply"  component={Apply} /> 
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <Route path="/" exact component={Index} />
+          <Route path="/apply" component={Apply} />
+          <Route path="/exam" component={Exam}></Route>
+          <Route path="/mine" component={MineIndex}></Route>
+        </Router>
+      </Provider>
     );
   }
+
 }
 
 export default App;

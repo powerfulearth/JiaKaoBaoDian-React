@@ -1,15 +1,25 @@
 import React from 'react'
-
 import { TabBar } from 'antd-mobile';
 
-import Home from './mine/index';
-import Apply from './apply/Apply'
+import Apply from './apply/Apply';
+import Found from './found/Found';
+import Exam from './exam/index'
+import Mine from './mine/Mine';
+
+import baoming from '../assets/images/baoming.png'
+import baoming_1 from '../assets/images/baoming_1.png'
+import jiakao from '../assets/images/jiakao.png'
+import jiakao_1 from '../assets/images/jiakao_1.png'
+import faxian from '../assets/images/faxian.png'
+import faxian_1 from '../assets/images/faxian_1.png'
+import wode from '../assets/images/wode.png'
+import wode_1 from '../assets/images/wode_1.png'
 
 class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'blueTab',
+      selectedTab: 'Exam',
       hidden: false,
       fullScreen: true,
     };
@@ -21,29 +31,28 @@ class Index extends React.Component {
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
-          barTintColor="white"
+          barTintColor="#F7F7F7"
           hidden={this.state.hidden}
         >
           <TabBar.Item
-            title="Life"
-            key="Life"
+            title="报名"
+            key="Apply"
             icon={<div style={{
               width: '22px',
               height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }}
+              background: `url(${baoming}) center center /  21px 21px no-repeat` }}
             />
             }
             selectedIcon={<div style={{
               width: '22px',
               height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
+              background: `url(${baoming_1}) center center /  21px 21px no-repeat` }}
             />
             }
-            selected={this.state.selectedTab === 'blueTab'}
-            // badge={1}
+            selected={this.state.selectedTab === 'Apply'}
             onPress={() => {
               this.setState({
-                selectedTab: 'blueTab',
+                selectedTab: 'Apply',
               });
             }}
             data-seed="logId"
@@ -55,69 +64,79 @@ class Index extends React.Component {
               <div style={{
                 width: '22px',
                 height: '22px',
-                background: 'url(https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  21px 21px no-repeat' }}
+                background: `url(${jiakao}) center center /  21px 21px no-repeat` }}
               />
             }
             selectedIcon={
               <div style={{
                 width: '22px',
                 height: '22px',
-                background: 'url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat' }}
+                background: `url(${jiakao_1}) center center /  21px 21px no-repeat` }}
               />
             }
-            title="Koubei"
-            key="Koubei"
-            // badge={'new'}
-            selected={this.state.selectedTab === 'redTab'}
+            title="驾考"
+            key="Exam"
+            selected={this.state.selectedTab === 'Exam'}
             onPress={() => {
               this.setState({
-                selectedTab: 'redTab',
+                selectedTab: 'Exam',
               });
             }}
             data-seed="logId1"
           >
-            <div>驾考</div>
+            <Exam></Exam>
           </TabBar.Item>
           <TabBar.Item
             icon={
               <div style={{
                 width: '22px',
                 height: '22px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  21px 21px no-repeat' }}
+                background: `url(${faxian}) center center /  21px 21px no-repeat` }}
               />
             }
             selectedIcon={
               <div style={{
                 width: '22px',
                 height: '22px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat' }}
+                background: `url(${faxian_1}) center center /  21px 21px no-repeat` }}
               />
             }
-            title="Friend"
-            key="Friend"
-            dot
-            selected={this.state.selectedTab === 'greenTab'}
+            title="发现"
+            key="Found"
+            selected={this.state.selectedTab === 'Found'}
             onPress={() => {
               this.setState({
-                selectedTab: 'greenTab',
+                selectedTab: 'Found',
               });
             }}
           >
-            <div>买车？？</div>
+            <Found></Found>
           </TabBar.Item>
           <TabBar.Item
-            icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
-            selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
-            title="My"
-            key="my"
-            selected={this.state.selectedTab === 'yellowTab'}
+            icon={
+              <div style={{
+                width: '22px',
+                height: '22px',
+                background: `url(${wode}) center center /  21px 21px no-repeat` }}
+              />
+            }
+            selectedIcon={
+              <div style={{
+                width: '22px',
+                height: '22px',
+                background: `url(${wode_1}) center center /  21px 21px no-repeat` }}
+              />
+            }
+            title="我的"
+            key="Mine"
+            selected={this.state.selectedTab === 'Mine'}
             onPress={() => {
               this.setState({
-                selectedTab: 'yellowTab',
+                selectedTab: 'Mine',
               });
             }}
           >
-            <Home></Home>
+            <Mine></Mine>
           </TabBar.Item>
         </TabBar>
       </div>
