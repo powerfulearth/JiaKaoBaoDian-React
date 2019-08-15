@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import { asyncLoadData, trueSelect, falseSelect } from './actionCreator'
 
 import TestPaperUI from './TestPaperUI'
+import { TEST_PAGE_ORDER,TEST_PAGE_SIMULATEEXAM,TEST_PAGE_ALLSIMULATE } from './actionTypes'
 
 import http from '../../../../util/http'
 import bScroll from 'better-scroll'
@@ -18,7 +19,13 @@ class TestPaper extends Component {
   }
   render() {
     return (
-      <TestPaperUI { ...this.props } examList={this.state.examList} choose={this.choose.bind(this)}>
+      <TestPaperUI 
+        { ...this.props } 
+        examList={this.state.examList} 
+        choose={this.choose.bind(this)} 
+        popupMenu={this.popupMenu.bind(this)}
+        backMenu={this.backMenu.bind(this)}
+      >
 
       </TestPaperUI>
     );
@@ -44,6 +51,7 @@ class TestPaper extends Component {
       }
       this.props.false(select)
     }
+    console.log(1);
     setTimeout(() => {
       if(!localStorage.getItem('orderExam')) {
         let arr = []
@@ -59,9 +67,18 @@ class TestPaper extends Component {
           localStorage.setItem('orderExam', JSON.stringify(arr))
         }
       }
-      document.querySelector("#'1-1'")
     },200)
     
+  }
+
+  popupMenu() {
+    document.querySelector('.menuBottom').style.height = '3rem'
+    document.querySelector('.bg').style.display = 'block'
+  }
+
+  backMenu(e) {
+    document.querySelector('.menuBottom').style.height = '0'
+    document.querySelector('.bg').style.display = 'none'
   }
 
   async componentDidMount() {
@@ -74,7 +91,7 @@ class TestPaper extends Component {
     new bScroll('.container', {
       click: true
     })    
-    new Swiper('.container', {
+    let examSwiper = new Swiper('.container', {
       observer: true,//修改swiper自己或子元素时，自动初始化swiper
       observeParents: false,//修改swiper的父元素时，自动初始化swiper
       on:{
@@ -103,7 +120,20 @@ class TestPaper extends Component {
         }
       }
     })
+    
+    if(this.props.match.params){
+      this.setState({
+        type:this.props.match.params.type
+      })
+      this.props.loadData(this.props.match.params.type)
+    }
   }
+
+  componentWillUnmount(){
+    console.log("答题界面卸载");
+    this.props.loadData("")
+  }
+    
 }
 
 
@@ -114,7 +144,9 @@ const mapState = state =>({
   orderExam: state.testPaper.orderExam
 })
 const mapDispatch = dispatch => ({
-  loadData: dispatch(asyncLoadData()),
+  loadData(type){
+    dispatch(asyncLoadData(type))
+  },
   true(select, orderExam) {
     dispatch(trueSelect(select, orderExam))
   },
@@ -123,4 +155,4 @@ const mapDispatch = dispatch => ({
   }
 })
 
-export default connect(mapState, mapDispatch)(TestPaper);
+export default connect(mapState, mapDispatch)(TestPaper)

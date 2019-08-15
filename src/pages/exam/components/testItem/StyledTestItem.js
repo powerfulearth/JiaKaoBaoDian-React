@@ -28,7 +28,6 @@ const StyledTestItemContainer = styled.div`
           width: 1.68rem;
           height: 1.2rem;
           display: block;
-          background: #000;
         }
       }
       .video_title {
@@ -50,11 +49,9 @@ const StyledTestItemContainer = styled.div`
           display: flex;
           align-items: center;
           margin-left: .25rem;
-          span {
-            display: inline-block;
+          img {
             width: .1rem;
             height: .12rem;
-            background: #000;
             margin-right: .06rem;
           }
         }

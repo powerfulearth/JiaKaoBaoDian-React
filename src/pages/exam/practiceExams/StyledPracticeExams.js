@@ -16,11 +16,14 @@ const StyledPracticeExams = styled.div`
     }
     .back {
       width: .18rem;
-      line-height: .44rem;
+      height: .12rem;
       position: absolute;
       left: .15rem;
-      font-weight: bold;
-      color: #424242;
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
     }
   }
 `

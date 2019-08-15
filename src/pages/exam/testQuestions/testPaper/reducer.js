@@ -29,7 +29,7 @@ const reducer = (state=defaultState, action) => {
         orderExam: action.orderExam
       }
     default: 
-      return state
+      return {list:action.list?action.list:state.list}
   }
 }
 

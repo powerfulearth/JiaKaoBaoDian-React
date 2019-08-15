@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
+import { Route} from 'react-router-dom';
 
-import PracticeExamsUI from './PracticeExamsUI'
+import TestPaper from '../testQuestions/testPaper/TestPaper'
+import {StyledPracticeExams} from './StyledPracticeExams';
 
 class PracticeExams extends Component {
   constructor(props) {
@@ -16,10 +18,16 @@ class PracticeExams extends Component {
   
   render() {
     return (
-      <PracticeExamsUI back={this.back.bind(this)} time={this.state.time}>
-        
-      </PracticeExamsUI>
-    );
+      <StyledPracticeExams>
+        <header>
+          <div className="back" onTouchEnd={this.back.bind(this)}>
+            <img src={require('assets/images/exam/test/back.png')} alt=""/>
+          </div>
+          <h3>倒计时 {this.state.time.minute}:{this.state.time.second}</h3>
+        </header>
+        <Route path="/exam/practiceExams/:page/:type" component={TestPaper} />
+      </StyledPracticeExams>
+    )
   }
 
   componentDidMount() {

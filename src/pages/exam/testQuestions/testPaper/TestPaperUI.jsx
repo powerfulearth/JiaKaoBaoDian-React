@@ -4,6 +4,7 @@ import React from 'react';
 import { StyledTestPaper, StyledTestBottom } from './StyledTestPaper'
 
 export default (props) => {
+  console.log(props);
   return (
     <>
       <StyledTestPaper>
@@ -79,29 +80,39 @@ export default (props) => {
         </div>
       </StyledTestPaper>
       <StyledTestBottom>
-        <div className="b_left">
-          <span className="pic iconfont icon-shoucang"></span>
-          <span className="text">收藏</span>
+        <div className="menuTop">
+          <div className="b_left">
+            <span className="pic"></span>
+            <span className="text">收藏</span>
+          </div>
+          <div className="b_right" onTouchEnd={props.popupMenu}>
+            <div className="true">
+              <span className="pic"></span>
+              <span className="num">0</span>
+            </div>
+            <div className="false">
+              <span className="pic"></span>
+              <span className="num">0</span>
+            </div>
+            <div className="menu">
+              <span className="pic"></span>
+              <span className="num">
+                <i className="done">1</i>
+                /
+                <i className="total">1334</i>
+              </span>
+            </div>
+          </div>
         </div>
-        <div className="b_right">
-          <div className="true">
-            <span className="pic iconfont icon-roundcheckfill"></span>
-            <span className="num">0</span>
-          </div>
-          <div className="false">
-            <span className="pic iconfont icon-roundclosefill"></span>
-            <span className="num">0</span>
-          </div>
-          <div className="menu">
-            <span className="pic iconfont icon-caidan"></span>
-            <span className="num">
-              <i className="done">1</i>
-              /
-              <i className="total">1334</i>
-            </span>
-          </div>
+        <div className="menuBottom">
+          <ul>
+            {props.list.map((value, index) => (
+              <li className="queNum" key={value.id}>{index+1}</li>
+            ))}
+          </ul>
         </div>
       </StyledTestBottom>
+      <div className="bg" onTouchEnd={e=>props.backMenu(e)}></div>
     </>
   )
 }

@@ -13,7 +13,7 @@ const StyledTestContainer = styled.div`
       .swiper-slide {
         width: 1.29rem !important;
         height: .75rem;
-        background: linear-gradient(90deg,rgba(46,226,195,1),rgba(16,184,193,1));
+        background: linear-gradient(93deg,rgba(0,169,241,1),rgba(0,98,234,1));
         border-radius: .1rem;
         display: flex;
         flex-direction: column;
@@ -30,6 +30,10 @@ const StyledTestContainer = styled.div`
       }
       .swiper-slide:nth-child(2) {
         z-index: 2;
+        background: linear-gradient(90deg,rgba(46,226,195,1),rgba(16,184,193,1));
+      }
+      .swiper-slide:nth-child(3) {
+        background: linear-gradient(90deg,rgba(254,158,90,1),rgba(254,91,75,1));
       }
       .swiper-slide-active {
         width: 1.68rem !important;

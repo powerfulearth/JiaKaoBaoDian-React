@@ -5,7 +5,9 @@ import { StyledTestHeaderContainer } from './StyledTestHeader'
 export default (props) => (
   <StyledTestHeaderContainer>
     {console.log(props.isTab)}
-    <div className="back iconfont icon-jiantoujinggao" onTouchEnd={props.back}></div>
+    <div className="back" onTouchEnd={props.back}>
+      <img src={require('assets/images/exam/test/back.png')} alt=""/>
+    </div>
     <div className="tab">
       <div className={"left" + (props.isTab === 1 ? ' active' : '')} onTouchEnd={props.tab.bind('', 1)}>
         答题模式
@@ -16,3 +18,4 @@ export default (props) => (
     </div>
   </StyledTestHeaderContainer>
 )
+
