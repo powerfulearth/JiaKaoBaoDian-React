@@ -21,13 +21,15 @@ export default class LoginAccountContainer extends Component {
 
   render() {
     let { keyWord, phone, password, bool } = this.state
+    const link = this.props.link
+    
     
     return (
       <LoginPhoneContainer>
         <div className="LoginContainer">
           <div>
             <input type="text"
-              value={keyWord==='name' ? phone : phone || '请输入您的手机号'}
+              value={keyWord==='name' ? phone : phone || (link==='phone' ? '请输入您的账号':'请输入您的手机号')}
               onFocus={()=> {this.handlerFocus('name')}}
               onBlur={()=>{
                 this.setState({
@@ -40,12 +42,12 @@ export default class LoginAccountContainer extends Component {
                 })
               }}
             />
-            <span className="hint">请输入正确的手机号</span>
+            <span className="hint hidden">请输入正确的手机号</span>
           </div>
           <div>
             <i className="le"></i>
             <input type="text"
-              value={keyWord==='code' ? password : password || '请输入您的验证码'}
+              value={keyWord==='code' ? password : password || (link==='phone' ? '请输入您的验证码':'请输入您的密码')}
               onFocus={()=> {this.handlerFocus('code')}}
               onBlur={()=>{
                 this.setState({
@@ -58,8 +60,10 @@ export default class LoginAccountContainer extends Component {
                 })
               }}
             />
+           <Clock onRef={this.onRef} sendMsg={this.sendMsg}/>
+            
             <Clock onRef={this.onRef} sendMsg={this.sendMsg} /> 
-            <span className="hint">验证码错误，请重新输入</span>
+            <span className="hint hidden">验证码错误，请重新输入</span>
           </div>
         </div>
         <div>

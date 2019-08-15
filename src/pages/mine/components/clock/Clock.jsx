@@ -30,7 +30,13 @@ export default class Clock extends Component {
 
   componentDidMount(){
     // this.props.onRef(this)
+   
   }
+
+  componentWillUnmount() {
+   
+  }
+
   
   handleClick() {
     // const {sendMsg} = this.props;
@@ -40,6 +46,7 @@ export default class Clock extends Component {
     }
     this.countDown();
   }
+
 
   countDown() {
     const {count} = this.state;

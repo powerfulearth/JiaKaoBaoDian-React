@@ -22,7 +22,7 @@ export default (props) => {
       </div>
       <LoginContent>
         <Tabbar></Tabbar>
-        <Route path="/mine/login/account" exact component={LoginAccount}></Route>
+        <LoginAccount link="account"></LoginAccount>
       </LoginContent>
     </LoginContainer>
   )

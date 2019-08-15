@@ -3,13 +3,6 @@ import React from 'react'
 import Tabbar from '../tabbar/Tabbar'
 import LoginAccount from '../main/AccountLogin/LoginAccount'
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  NavLink
-} from 'react-router-dom'
-
 import { LoginContainer, LoginContent } from './StyledLoginContent'
 
 export default (props) => {
@@ -22,7 +15,7 @@ export default (props) => {
       </div>
       <LoginContent>
         <Tabbar></Tabbar>
-        <Route path="/mine/login" exact component={LoginAccount}></Route>
+        <LoginAccount link="phone"></LoginAccount>
       </LoginContent>
     </LoginContainer>
   )

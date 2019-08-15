@@ -23,6 +23,9 @@ const LoginPhoneContainer = styled.div`
         font-size: .1rem;
         color: #ff5500;
       } 
+      > .hidden {
+        display: none;
+      }
     }
     > div:first-child {
       position: relative;
