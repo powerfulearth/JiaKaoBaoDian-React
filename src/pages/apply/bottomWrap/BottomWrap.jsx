@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 import {BotContainer , BorderItem} from './StyledBotWrapContainer';
 import JiaxiaoImg from '../../../assets/images/apply/jiaxiao.png';
@@ -8,7 +9,7 @@ class BottomWrap extends Component {
     return (
       <BotContainer>
         <BorderItem hasBorder={true}>
-        <a href="/apply/jxdetail">
+        <Link to="/apply/jxdetail">
             <img src={JiaxiaoImg} alt=""/>
             <div className="nm">
               <span>东方时尚驾校</span>
@@ -23,10 +24,10 @@ class BottomWrap extends Component {
               <span>规模指数100</span>
               <span>35km</span>
             </div>
-          </a>
+          </Link>
         </BorderItem>
         <BorderItem hasBorder={true}> 
-        <a href="/apply/jxdetail">
+        <Link to="/apply/jxdetail">
             <img src={JiaxiaoImg} alt=""/>
             <div className="nm">
               <span>东方时尚驾校</span>
@@ -41,7 +42,7 @@ class BottomWrap extends Component {
               <span>规模指数100</span>
               <span>35km</span>
             </div>
-          </a>
+          </Link>
         </BorderItem>
       </BotContainer>
     );

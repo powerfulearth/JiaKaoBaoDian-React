@@ -45,7 +45,7 @@ const ContentContainer = styled.div`
       justify-content: center;
       align-items: center;
     }
-    li:first-child{
+    li:nth-child(2){
       font-weight:bold;
       font-size: .13rem;
       color: #131313;
@@ -85,6 +85,20 @@ const ContentContainer = styled.div`
       line-height: .23rem;
       text-align: center;
       color: #131313;
+    }
+  }
+  >a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #131313;
+    font-size: .15rem;
+    font-weight:bold;
+    margin-top: .15rem;
+    img{
+      margin-left: .1rem;
+      width: .08rem;
+      height: .12rem;
     }
   }
   

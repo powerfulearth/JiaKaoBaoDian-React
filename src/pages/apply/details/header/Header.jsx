@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withRouter } from "react-router-dom";
 
 import {HeadContainer} from './StyledHead'
 
@@ -9,7 +10,7 @@ class Header extends Component {
   render() {
     return (
       <HeadContainer>
-        <img className="leftArrow" src={LeftArrow} alt=""/>
+        <img className="leftArrow" onClick={()=>{this.props.history.goBack()}} src={LeftArrow} alt=""/>
         <img className="threePoints" src={ThreePoints} alt=""/>
         <div className="num">
           <span>1/1875</span>
@@ -19,4 +20,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);
