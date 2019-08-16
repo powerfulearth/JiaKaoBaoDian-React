@@ -25,18 +25,35 @@ export default (props) => {
                   </div>)
                   : ''
                 }
-                <div className="options">
-                  {[value.item1, value.item2, value.item3, value.item4].map((item, index) => (
-                    <div className="row" key={index} data-index={index} onTouchEnd={() => { props.choose(index, value.id, value.answer, value.chapter) }}>
-                        {(() => {
-                          switch (index) {
-                            case index: return <span className="letter">A</span>
-                            default: break;
-                          }
-                        })()}
-                      <span className="content">{item}</span>
-                    </div>
-                  ))}
+                <div className="options" data-id={value.id}>
+                  <div className="row"  >
+                    <span className="letter">A</span>
+                    <span className="content" data-selected="1" data-answer={value.answer} onTouchEnd={(e) => {props.choose(e)}} >{value.item1}</span>
+                  </div>
+                  <div className="row" >
+                    <span className="letter">B</span>
+                    <span className="content"  data-selected="2" data-answer={value.answer} onTouchEnd={(e) => {props.choose(e)}}>{value.item2}</span>
+                  </div>
+                  {
+                    value.item3?
+                    (
+                      <div className="row" >
+                        <span className="letter">C</span>
+                        <span className="content"  data-selected="3" data-answer={value.answer} onTouchEnd={(e) => {props.choose(e)}}>{value.item3}</span>
+                      </div>
+                    )
+                    :''
+                  }
+                  {
+                    value.item4?
+                    (
+                      <div className="row" >
+                        <span className="letter">D</span>
+                        <span className="content"  data-selected="4" data-answer={value.answer} onTouchEnd={(e) => {props.choose(e)}}>{value.item4}</span>
+                      </div>
+                    )
+                    :''
+                  }
                 </div>
                 {props.isTab === 2 ? (
                   <div className="error">

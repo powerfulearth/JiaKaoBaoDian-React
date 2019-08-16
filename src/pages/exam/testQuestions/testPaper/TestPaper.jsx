@@ -15,6 +15,7 @@ class TestPaper extends Component {
     super(props)
     this.state = {
       examList: [],
+      didHistory:[]
     }
   }
   render() {
@@ -31,44 +32,13 @@ class TestPaper extends Component {
     );
   }
 
-  choose(index, id, answer, chapter) {
-    if(index+1 === answer) {
-      let select = {
-        chapter,
-        id,
-        index,
-        answer,
-        isRight: true
-      }
-      this.props.true(select)
-    } else {
-      let select = {
-        chapter,
-        id,
-        index,
-        answer,
-        isRight: false
-      }
-      this.props.false(select)
-    }
-    console.log(1);
-    setTimeout(() => {
-      if(!localStorage.getItem('orderExam')) {
-        let arr = []
-        arr.push(this.props.select)
-        localStorage.setItem('orderExam', JSON.stringify(arr))
-      } else {
-        let arr = JSON.parse(localStorage.getItem('orderExam'))
-        let _index = arr.findIndex(item => {
-          return item.id == this.props.select.id
-        });
-        if(_index === -1) {
-          arr.push(this.props.select)
-          localStorage.setItem('orderExam', JSON.stringify(arr))
-        }
-      }
-    },200)
-    
+  choose(e) {
+    let userSelected = e.target.getAttribute('data-selected')
+    let answer = e.target.getAttribute('data-answer')
+    userSelected===answer?
+    console.log("对了")
+    :
+    console.log("错了");
   }
 
   popupMenu() {
