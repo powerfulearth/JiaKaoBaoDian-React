@@ -96,9 +96,26 @@ const ContentContainer = styled.div`
     font-weight:bold;
     margin-top: .15rem;
     img{
-      margin-left: .1rem;
+      margin-left: .05rem;
       width: .08rem;
       height: .12rem;
+    }
+  }
+  .coachTeam{
+    display: flex;
+    justify-content: space-between;
+    padding: .15rem;
+    >span{
+      font-size: .18rem;
+      font-weight: bold;
+    }
+    a{
+      color:#131313;
+      img{
+        margin-left: .05rem;
+        width: .08rem;
+        height: .12rem;
+      }
     }
   }
   

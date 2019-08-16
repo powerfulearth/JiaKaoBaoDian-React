@@ -32,10 +32,12 @@ class Content extends Component {
           <span>查看全部班型 &nbsp;（共35个）</span>
             <img src={MoreImg}  alt="更多"/>
         </Link>
-        <div className="ranking">
+        <div className="coachTeam">
           <span>教练团队</span>
-          <span>全部120名教练</span>
-          <img src={MoreImg} alt="更多图标"/>
+          <Link to="/apply/jxdetail/allcoach">
+            <span>全部120名教练</span>
+            <img src={MoreImg} alt="更多图标"/>
+          </Link>
         </div>
       </ContentContainer>
     );
