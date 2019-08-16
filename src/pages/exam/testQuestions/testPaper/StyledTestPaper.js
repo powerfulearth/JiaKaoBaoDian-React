@@ -1,5 +1,13 @@
 import styled from 'styled-components'
 
+const collect = require('assets/images/exam/test/star.png')
+
+const right = require('assets/images/exam/test/true.png')
+const error = require('assets/images/exam/test/false.png')
+const right_big = require('assets/images/exam/test/true_big.png')
+const error_big = require('assets/images/exam/test/false_big.png')
+const menu = require('assets/images/exam/test/menu.png')
+
 const StyledTestPaper = styled.div`
   flex: 1;
   overflow: hidden;
@@ -168,63 +176,106 @@ const StyledTestPaper = styled.div`
 
 const StyledTestBottom = styled.div`
   width: 100%;
-  height: .5rem;
   border-top: .01rem solid #DEDEDE;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 .15rem;
-  .b_left {
+  position: absolute;
+  bottom: 0;
+  z-index: 99999;
+  background: #fff;
+  .menuTop {
     display: flex;
+    height: .5rem;
+    justify-content: space-between;
     align-items: center;
-    span {
-      display: block;
-    }
-    .pic {
-      font-size: .18rem;
-      margin-right: .06rem;
-    }
-    .text {
-      font-size: .13rem;
-    }
-  }
-  .b_right {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-    .true, .false {
+    padding: 0 .15rem;
+      .b_left {
       display: flex;
       align-items: center;
       span {
         display: block;
       }
       .pic {
-        color: #1DACF9;
-        font-size: .18rem;
+        width: .15rem;
+        height: .15rem;
+        background: url(${collect}) center no-repeat;
+        background-size: .15rem .15rem;
         margin-right: .06rem;
       }
+      .text {
+        font-size: .13rem;
+        line-height: .15rem;
+      }
     }
-    .true {
-      margin-right: .3rem;
+    .b_right {
+      display: flex;
+      justify-content: flex-end;
+      .true, .false {
+        display: flex;
+        align-items: center;
+        span {
+          display: block;
+        }
+        .pic {
+          width: .13rem;
+          height: .13rem;
+          margin-right: .06rem;
+        }
+      }
+      .true {
+        margin-right: .3rem;
+        .pic {
+          background: url(${right}) center no-repeat;
+          background-size: .13rem .13rem;
+        }
+      }
+      .false {
+        .pic {
+          background: url(${error}) center no-repeat;
+          background-size: .16rem .16rem;
+        }
+      }
     }
-    .false {
+    .menu {
+      margin-left: .4rem;
+      display: flex;
+      align-items: center;
+      span {
+        display: block;
+      }
       .pic {
-        color: #FE4648;
+        width: .13rem;
+        height: .13rem;
+        background: url(${menu}) center no-repeat;
+        background-size: .13rem .13rem;
+      }
+      .num {
+        margin-left: .05rem;
       }
     }
   }
-  .menu {
-    margin-left: .4rem;
-    display: flex;
-    align-items: center;
-    span {
-      display: block;
+  .menuBottom {
+    height: 0;
+    transition: all .1s linear;
+    ul {
+      border-top: .01rem solid #DEDEDE;
+      display: flex;
+      max-height: 100%;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding: .15rem;
+      overflow-y: scroll;
     }
-    .pic {
-      font-size: .18rem;
+    .queNum {
+      width: .3rem;
+      height: .3rem;
+      border-radius: 50%;
+      border: .01rem solid #A1A1A1;
+      text-align: center;
+      line-height: .3rem;
+      margin-right: .33rem;
+      margin-bottom: .15rem;
     }
-    .num {
-      margin-left: .05rem;
+    .queNum:nth-child(6n) {
+      margin-right: 0;
     }
   }
 `

@@ -7,8 +7,10 @@ class BackHeader extends Component {
   render() {
     return (
       <StyledBackHeaderContainer>
+        <div className="back" onTouchEnd={this.back.bind(this)}>
+          <img src={require('assets/images/exam/test/back.png')} alt=""/>
+        </div>
         <h3>专项练习</h3>
-        <span className="back iconfont icon-jiantoujinggao" onTouchEnd={this.back.bind(this)}></span>
       </StyledBackHeaderContainer>
     )
   }

@@ -8,7 +8,7 @@ class bibleToolUI extends Component {
       <>
         <BannerPic>
           <div className="bannerPic">
-            <img src="" alt=""/>
+            <img src={require('assets/images/exam/one/banner.png')} alt=""/>
           </div>
         </BannerPic>
         <StyledBibleToolContainer>
@@ -16,19 +16,19 @@ class bibleToolUI extends Component {
           <div className="tollBox">
             <div className="toll_item">
               <p className="toll_item_title">我的收藏</p>
-              <img src="" alt="" className="toll_item_pic" />
+              <img src={require('assets/images/exam/one/01.png')} alt="" className="toll_item_pic" />
             </div>
             <div className="toll_item">
               <p className="toll_item_title">我的收藏</p>
-              <img src="" alt="" className="toll_item_pic" />
+              <img src={require('assets/images/exam/one/02.png')} alt="" className="toll_item_pic" />
             </div>
             <div className="toll_item">
               <p className="toll_item_title">我的收藏</p>
-              <img src="" alt="" className="toll_item_pic" />
+              <img src={require('assets/images/exam/one/03.png')} alt="" className="toll_item_pic" />
             </div>
             <div className="toll_item">
               <p className="toll_item_title">我的收藏</p>
-              <img src="" alt="" className="toll_item_pic" />
+              <img src={require('assets/images/exam/one/04.png')} alt="" className="toll_item_pic" />
             </div>
           </div>
         </StyledBibleToolContainer>

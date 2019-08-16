@@ -4,7 +4,6 @@ const BannerPic = styled.div`
   .bannerPic {
     width: 100%;
     height: .83rem;
-    background: #000;
     img {
       width: 100%;
       height: 100%;
@@ -39,7 +38,6 @@ const StyledBibleToolContainer = styled.div`
       .toll_item_pic {
         width: .45rem;
         height: .43rem;
-        background: #000;
         display: block;
         margin: 0 auto;
       }
