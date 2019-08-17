@@ -60,7 +60,7 @@ export default (props) => {
             <li><i className="err"></i><span>我的错题</span></li>
             <li><i className="star"></i><span>我的收藏</span></li>
             <li><i className="sync"></i><span>同步数据</span></li>
-            <li><i className="change  "></i><span>切换题库</span></li>
+            <li><i className="change  "></i><span><a href='/mine/changelibrary' style={{color: '#000'}}>切换题库</a></span></li>
           </ul>
           <ul className="row-2">
             <li><i className="history"></i><span>浏览记录</span></li>

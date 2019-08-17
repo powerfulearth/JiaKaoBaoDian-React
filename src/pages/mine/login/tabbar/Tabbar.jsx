@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 
 import { TabbarContent } from './styledTabbar'
 
-import { withRouter } from 'react-router-dom'
+import MyLink from './link/MyLink'
+
 
 class TabbarContainer extends Component {
   constructor(props) {
@@ -10,23 +11,32 @@ class TabbarContainer extends Component {
     this.state = {
       dir: 'right'
     }
+    this.handleClickChange = this.handleClickChange.bind(this)
   }
 
   render() {
+    let { dir } = this.state
     return (
       <TabbarContent>
       <ul className="tabbar">
-        <li>
+        <MyLink url='/mine/login/account'>
           账号登录
-        </li>
+        </MyLink>
         <li className="mid"> | </li>
-        <li className="active">
+        <MyLink url='/mine/login' className="active" onClick={() => {this.handleClickChange('right')}} className={dir==='right' ? 'active' : ''}>
           手机号登录
-        </li>
+        </MyLink>
       </ul>
     </TabbarContent>
     )
   }
+
+  handleClickChange(dir) {
+    this.setState({
+      dir
+    })
+    
+  }
 }
 
-export default withRouter(TabbarContainer)
+export default TabbarContainer

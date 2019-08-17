@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Tabbar from '../tabbar/Tabbar'
-import LoginAccount from '../main/AccountLogin/LoginAccount'
+import Tabbar from '../../tabbar/Tabbar'
+import LoginAccount from '../../main/AccountLogin/LoginAccount'
 
-import { LoginContainer, LoginContent } from './StyledLoginContent'
+import { LoginContainer, LoginContent } from '../../login-content/StyledLoginContent'
 
 export default (props) => {
   
@@ -15,9 +15,8 @@ export default (props) => {
       </div>
       <LoginContent>
         <Tabbar></Tabbar>
-        <LoginAccount link="phone"></LoginAccount>
+        <LoginAccount link="account"></LoginAccount>
       </LoginContent>
     </LoginContainer>
   )
 }
-
