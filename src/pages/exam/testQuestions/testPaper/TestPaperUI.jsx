@@ -106,9 +106,9 @@ export default (props) => {
         </div>
         <div className="menuBottom">
           <ul>
-            {props.list.map((value, index) => (
+            {/* {props.list.map((value, index) => (
               <li className="queNum" key={value.id}>{index+1}</li>
-            ))}
+            ))} */}
           </ul>
         </div>
       </StyledTestBottom>
