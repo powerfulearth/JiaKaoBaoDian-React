@@ -1,33 +1,21 @@
-import { TEST_PAGE, TRUE, FALSE } from './actionTypes'
 
 const defaultState = {
   list:[],
-  select: {
-    chapter: '',
-    id: '',
-    index: '',
-    answer: '',
-    isRight: false
-  },
-  orderExam: []
+  didHistory:{}
 }
 
 const reducer = (state=defaultState, action) => {
   switch(action.type) {
-    case TEST_PAGE: 
+
+    case 'false':
       return {
-        list: action.list
+        didHistory:{
+          action
+        }
       }
-    case TRUE: 
-      return {
-        select: action.select,
-        orderExam: action.orderExam
-      }
-    case FALSE: 
-      return {
-        select: action.select,
-        orderExam: action.orderExam
-      }
+    case 'true':return{
+
+    }
     default: 
       return {list:action.list?action.list:state.list}
   }

@@ -1,10 +1,9 @@
 import React from 'react';
+import classNames from 'classnames';
 // import { Toast } from 'antd-mobile';
-
 import { StyledTestPaper, StyledTestBottom } from './StyledTestPaper'
 
 export default (props) => {
-  console.log(props);
   return (
     <>
       <StyledTestPaper>
@@ -15,7 +14,7 @@ export default (props) => {
                 <div className="testTitle">
                   <span className="testType">
                     单选题
-                        </span>
+                  </span>
                   {/* <p className="testText">驾驶机动车在道路上<i>违反道路交通安全法</i>的行为，属于什么行为</p> */}
                   <p className="testText">{value.question}</p>
                 </div>
@@ -25,21 +24,21 @@ export default (props) => {
                   </div>)
                   : ''
                 }
-                <div className="options" data-id={value.id}>
+                <div className="options" data-id={value.id} data-answer={value.answer}>
                   <div className="row"  >
                     <span className="letter">A</span>
-                    <span className="content" data-selected="1" data-answer={value.answer} onTouchEnd={(e) => {props.choose(e)}} >{value.item1}</span>
+                    <span className="content" data-selected="1"  onTouchEnd={(e) => {props.choose(e)}} >{value.item1}</span>
                   </div>
                   <div className="row" >
                     <span className="letter">B</span>
-                    <span className="content"  data-selected="2" data-answer={value.answer} onTouchEnd={(e) => {props.choose(e)}}>{value.item2}</span>
+                    <span className="content"  data-selected="2"  onTouchEnd={(e) => {props.choose(e)}}>{value.item2}</span>
                   </div>
                   {
                     value.item3?
                     (
                       <div className="row" >
-                        <span className="letter">C</span>
-                        <span className="content"  data-selected="3" data-answer={value.answer} onTouchEnd={(e) => {props.choose(e)}}>{value.item3}</span>
+                        <span className={classNames(['letter'])} >C</span>
+                        <span className="content"  data-selected="3"  onTouchEnd={(e) => {props.choose(e)}}>{value.item3}</span>
                       </div>
                     )
                     :''
@@ -49,7 +48,7 @@ export default (props) => {
                     (
                       <div className="row" >
                         <span className="letter">D</span>
-                        <span className="content"  data-selected="4" data-answer={value.answer} onTouchEnd={(e) => {props.choose(e)}}>{value.item4}</span>
+                        <span className="content"  data-selected="4"  onTouchEnd={(e) => {props.choose(e)}}>{value.item4}</span>
                       </div>
                     )
                     :''
@@ -114,9 +113,9 @@ export default (props) => {
             <div className="menu">
               <span className="pic"></span>
               <span className="num">
-                <i className="done">1</i>
+                <i className="done">{props.currentQuestion}</i>
                 /
-                <i className="total">1334</i>
+                <i className="total">{props.TotalQuestion}</i>
               </span>
             </div>
           </div>

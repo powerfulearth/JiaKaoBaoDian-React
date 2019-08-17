@@ -4,8 +4,6 @@ const collect = require('assets/images/exam/test/star.png')
 
 const right = require('assets/images/exam/test/true.png')
 const error = require('assets/images/exam/test/false.png')
-const right_big = require('assets/images/exam/test/true_big.png')
-const error_big = require('assets/images/exam/test/false_big.png')
 const menu = require('assets/images/exam/test/menu.png')
 
 const StyledTestPaper = styled.div`
@@ -68,20 +66,7 @@ const StyledTestPaper = styled.div`
             font-size: .15rem;
             margin-right: .16rem;
           }
-          .true {
-            width: .27rem;
-            height: .27rem;
-            border-radius: 50%;
-            background: red;
-            margin-right: .16rem;
-          }
-          .false {
-            width: .27rem;
-            height: .27rem;
-            border-radius: 50%;
-            background: black;
-            margin-right: .16rem;
-          }
+          
           .content {
             font-size: .18rem;
           }
