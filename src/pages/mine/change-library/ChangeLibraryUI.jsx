@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class Regiter extends Component {
+export default class ChangeLibraryUI extends Component {
   render() {
     return (
       <div>
-        Register
+        
       </div>
     )
   }

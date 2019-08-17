@@ -4,7 +4,6 @@ import { TabbarContent } from './styledTabbar'
 
 import MyLink from './link/MyLink'
 
-// import { withRouter } from 'react-router-dom'
 
 class TabbarContainer extends Component {
   constructor(props) {

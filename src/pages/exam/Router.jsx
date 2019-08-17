@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom"
 
-import Index from './index'
 import TestQuestions  from './testQuestions/TestQuestions'
 import SpecialTest from './specialTest/SpecialTest'
 import PracticeExams from './practiceExams/PracticeExams'

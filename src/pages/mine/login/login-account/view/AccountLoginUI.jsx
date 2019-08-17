@@ -3,13 +3,6 @@ import React from 'react'
 import Tabbar from '../../tabbar/Tabbar'
 import LoginAccount from '../../main/AccountLogin/LoginAccount'
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  NavLink
-} from 'react-router-dom'
-
 import { LoginContainer, LoginContent } from '../../login-content/StyledLoginContent'
 
 export default (props) => {
