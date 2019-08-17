@@ -13,57 +13,57 @@ class TestItemUI extends Component {
         <div className="item_box">
           <div className="item_video">
             <div className="video_pic">
-              <img src="" alt=""/>
+              <img src={require('assets/images/exam/two/video1.png')} alt=""/>
               <div className="icon"></div>
             </div>
             <p className="video_title">倒车入库</p>
             <div className="video_bottom">
               <p className="passRate">通过率70%</p>
               <p className="viewCounts">
-                <span></span>
-                389.4万
+                <img src={require('assets/images/exam/two/pic.png')} alt=""/>
+                <span className="num">389.4万</span>
               </p>
             </div>
           </div>
           <div className="item_video">
             <div className="video_pic">
-              <img src="" alt=""/>
+              <img src={require('assets/images/exam/two/video1.png')} alt=""/>
               <div className="icon"></div>
             </div>
             <p className="video_title">倒车入库</p>
             <div className="video_bottom">
               <p className="passRate">通过率70%</p>
               <p className="viewCounts">
-                <span></span>
-                389.4万
+                <img src={require('assets/images/exam/two/pic.png')} alt=""/>
+                <span className="num">389.4万</span>
               </p>
             </div>
           </div>
           <div className="item_video">
             <div className="video_pic">
-              <img src="" alt=""/>
+              <img src={require('assets/images/exam/two/video1.png')} alt=""/>
               <div className="icon"></div>
             </div>
             <p className="video_title">倒车入库</p>
             <div className="video_bottom">
               <p className="passRate">通过率70%</p>
               <p className="viewCounts">
-                <span></span>
-                389.4万
+                <img src={require('assets/images/exam/two/pic.png')} alt=""/>
+                <span className="num">389.4万</span>
               </p>
             </div>
           </div>
           <div className="item_video">
             <div className="video_pic">
-              <img src="" alt=""/>
+              <img src={require('assets/images/exam/two/video1.png')} alt=""/>
               <div className="icon"></div>
             </div>
             <p className="video_title">倒车入库</p>
             <div className="video_bottom">
               <p className="passRate">通过率70%</p>
               <p className="viewCounts">
-                <span></span>
-                389.4万
+                <img src={require('assets/images/exam/two/pic.png')} alt=""/>
+                <span className="num">389.4万</span>
               </p>
             </div>
           </div>

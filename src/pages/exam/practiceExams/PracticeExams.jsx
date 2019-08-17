@@ -20,8 +20,10 @@ class PracticeExams extends Component {
     return (
       <StyledPracticeExams>
         <header>
+          <div className="back" onTouchEnd={this.back.bind(this)}>
+            <img src={require('assets/images/exam/test/back.png')} alt=""/>
+          </div>
           <h3>倒计时 {this.state.time.minute}:{this.state.time.second}</h3>
-          <span className="back iconfont icon-jiantoujinggao" onTouchEnd={this.back.bind(this)}></span>
         </header>
         <Route path="/exam/practiceExams/:page/:type" component={TestPaper} />
       </StyledPracticeExams>

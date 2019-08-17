@@ -40,13 +40,13 @@ class Index extends React.Component {
             icon={<div style={{
               width: '22px',
               height: '22px',
-              background: `url(${baoming}) center center /  21px 21px no-repeat` }}
+              background: `url(${baoming}) center center /  22px 22px no-repeat` }}
             />
             }
             selectedIcon={<div style={{
               width: '22px',
               height: '22px',
-              background: `url(${baoming_1}) center center /  21px 21px no-repeat` }}
+              background: `url(${baoming_1}) center center /  22px 22px no-repeat` }}
             />
             }
             selected={this.state.selectedTab === 'Apply'}
@@ -64,14 +64,14 @@ class Index extends React.Component {
               <div style={{
                 width: '22px',
                 height: '22px',
-                background: `url(${jiakao}) center center /  21px 21px no-repeat` }}
+                background: `url(${jiakao}) center center /  22px 22px no-repeat` }}
               />
             }
             selectedIcon={
               <div style={{
                 width: '22px',
                 height: '22px',
-                background: `url(${jiakao_1}) center center /  21px 21px no-repeat` }}
+                background: `url(${jiakao_1}) center center /  22px 22px no-repeat` }}
               />
             }
             title="驾考"
@@ -91,14 +91,14 @@ class Index extends React.Component {
               <div style={{
                 width: '22px',
                 height: '22px',
-                background: `url(${faxian}) center center /  21px 21px no-repeat` }}
+                background: `url(${faxian}) center center /  22px 22px no-repeat` }}
               />
             }
             selectedIcon={
               <div style={{
                 width: '22px',
                 height: '22px',
-                background: `url(${faxian_1}) center center /  21px 21px no-repeat` }}
+                background: `url(${faxian_1}) center center /  22px 22px no-repeat` }}
               />
             }
             title="发现"
@@ -117,14 +117,14 @@ class Index extends React.Component {
               <div style={{
                 width: '22px',
                 height: '22px',
-                background: `url(${wode}) center center /  21px 21px no-repeat` }}
+                background: `url(${wode}) center center /  22px 22px no-repeat` }}
               />
             }
             selectedIcon={
               <div style={{
                 width: '22px',
                 height: '22px',
-                background: `url(${wode_1}) center center /  21px 21px no-repeat` }}
+                background: `url(${wode_1}) center center /  22px 22px no-repeat` }}
               />
             }
             title="我的"

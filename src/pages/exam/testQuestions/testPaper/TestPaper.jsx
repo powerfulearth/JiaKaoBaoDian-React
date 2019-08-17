@@ -14,52 +14,54 @@ class TestPaper extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      examList: []
+      examList: [],
+      didHistory:[]
     }
   }
   render() {
     return (
-      <TestPaperUI { ...this.props } examList={this.state.examList} choose={this.choose.bind(this)}>
+      <TestPaperUI 
+        { ...this.props } 
+        examList={this.state.examList} 
+        choose={this.choose.bind(this)} 
+        popupMenu={this.popupMenu.bind(this)}
+        backMenu={this.backMenu.bind(this)}
+      >
 
       </TestPaperUI>
     );
   }
 
-  choose(index, id, answer, chapter) {
-    if(index+1 === answer) {
-      let select = {
-        chapter,
-        id,
-        index,
-        answer,
-        isRight: true
-      }
-      this.props.true(select)
-    } else {
-      let select = {
-        chapter,
-        id,
-        index,
-        answer,
-        isRight: false
-      }
-      this.props.false(select)
-    }
-    
+  choose(e) {
+    let userSelected = e.target.getAttribute('data-selected')
+    let answer = e.target.getAttribute('data-answer')
+    userSelected===answer?
+    console.log("对了")
+    :
+    console.log("错了");
+  }
+
+  popupMenu() {
+    document.querySelector('.menuBottom').style.height = '3rem'
+    document.querySelector('.bg').style.display = 'block'
+  }
+
+  backMenu(e) {
+    document.querySelector('.menuBottom').style.height = '0'
+    document.querySelector('.bg').style.display = 'none'
   }
 
   async componentDidMount() {
-    console.log(this.props);
     let that = this
     let index = 0
-    let result = await http('https://api.myjson.com/bins/e2smr')
+    let result = await http('https://api.myjson.com/bins/10lkzb')
     this.setState({
       examList: result.slice(0,3)
     })
     new bScroll('.container', {
       click: true
     })    
-    new Swiper('.container', {
+    let examSwiper = new Swiper('.container', {
       observer: true,//修改swiper自己或子元素时，自动初始化swiper
       observeParents: false,//修改swiper的父元素时，自动初始化swiper
       on:{
