@@ -4,5 +4,5 @@ export const TEST_PAGE_ORDER = 'TEST_PAGE_ORDER'
 export const TEST_PAGE_SIMULATEEXAM = 'TEST_PAGE_SIMULATEEXAM'
 export const TEST_PAGE_ALLSIMULATE = 'TEST_PAGE_ALLSIMULATE'
 
-export const TRUE = 'TRUE'
-export const FALSE = 'FALSE' 
+export const SETCOLLECT = 'SETCOLLECT'
+
