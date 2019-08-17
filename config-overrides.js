@@ -10,6 +10,6 @@ module.exports = override(
 
   addWebpackAlias({
     assets: path.resolve(__dirname, './src/assets'),
-    
+    pageComponents: path.resolve(__dirname, './src/pages/components')
   })  
 );

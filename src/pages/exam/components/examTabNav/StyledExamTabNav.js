@@ -26,7 +26,6 @@ const StyledExamTabNavContainer = styled.div`
           display: block;
           width: .3rem;
           height: .3rem;
-          background: #000;
           margin: 0 auto;
         }
         p {
