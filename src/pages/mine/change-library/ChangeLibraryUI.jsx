@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
 
+import { StyledChangeLibraryContainer } from './StyledChangeLibrary'
+
+import Head from './view/head/Head'
+
+
 export default class ChangeLibraryUI extends Component {
   render() {
     return (
-      <div>
+      <StyledChangeLibraryContainer>
+        <Head></Head>
         
-      </div>
+      </StyledChangeLibraryContainer>
     )
   }
 }
