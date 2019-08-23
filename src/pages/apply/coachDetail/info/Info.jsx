@@ -15,7 +15,7 @@ export class Info extends Component {
           <img src={ProfilePhotoImg} alt=""/>
           <div>
             <div>
-              <span>王腾</span>
+              <span>霍勇甫</span>
               <img className="redStarImg" src={RedStarImg} alt=""/>
             </div>
             <div>

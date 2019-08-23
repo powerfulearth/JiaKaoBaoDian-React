@@ -6,11 +6,14 @@ import { reducer as testPaper } from '../pages/exam/testQuestions/testPaper/redu
 import { reducer as testHeader } from '../pages/exam/testQuestions/testHeader/reducer'
 import {indexReducer} from '../pages/exam/indexReducer';
 
+import { applyReducer } from '../pages/apply/bottomWrap/';
+
 
 const reducer = combineReducers({
   testPaper,
   testHeader,
-  indexReducer
+  indexReducer,
+  applyReducer
 })
 
 export default reducer
