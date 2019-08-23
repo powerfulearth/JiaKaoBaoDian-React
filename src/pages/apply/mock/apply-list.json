@@ -1,22 +1,62 @@
 {
-  "code": 0,
-  "msg": "success",
-  "data": [
-  {
-      "id": 1,
-      "schoolName": "东方时尚驾校",
-      "schoolAddress": "海淀区中关村",
-      "phone": "1241324321423",
-      "schoolDesc": "cdsght",
-      "logo": "fre",
-      "list": [
-          {
-              "classesName": "普通班",
-              "price": 5600
-             
-          }
-      ]
-  
-  }
-  ]
+    "code": 0,
+    "msg": "success",
+    "data": [
+        {
+            "id": 1,
+            "schoolName": "东方时尚驾校",
+            "schoolAddress": "海淀区中关村",
+            "phone": "1241324321423",
+            "schoolDesc": "cdsght",
+            "logo": "fre",
+            "list": [
+                {
+                    "classesName": "普通班",
+                    "price": 5600
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "schoolName": "北方驾校",
+            "schoolAddress": "海淀区中关村",
+            "phone": "1241324321423",
+            "schoolDesc": "cdsght",
+            "logo": "fre",
+            "list": [
+                {
+                    "classesName": "普通班",
+                    "price": 3200
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "schoolName": "海淀驾校",
+            "schoolAddress": "海淀区中关村",
+            "phone": "1241324321423",
+            "schoolDesc": "cdsght",
+            "logo": "fre",
+            "list": [
+                {
+                    "classesName": "普通班",
+                    "price": 4280
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "schoolName": "京都府驾校",
+            "schoolAddress": "海淀区中关村",
+            "phone": "1241324321423",
+            "schoolDesc": "cdsght",
+            "logo": "fre",
+            "list": [
+                {
+                    "classesName": "普通班",
+                    "price": 3200
+                }
+            ]
+        }
+    ]
 }

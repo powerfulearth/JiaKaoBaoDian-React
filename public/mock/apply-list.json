@@ -1,0 +1,22 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": [
+  {
+      "id": 1,
+      "schoolName": "东方时尚驾校",
+      "schoolAddress": "海淀区中关村",
+      "phone": "1241324321423",
+      "schoolDesc": "cdsght",
+      "logo": "fre",
+      "list": [
+          {
+              "classesName": "普通班",
+              "price": 5600
+             
+          }
+      ]
+  
+  }
+  ]
+}
