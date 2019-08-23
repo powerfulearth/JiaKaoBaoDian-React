@@ -9,7 +9,7 @@ const asyncLoadData = (type) => {
   return (dispatch) => {
     let url=""
     switch(type){
-      case TEST_PAGE_ORDER: url="https://api.myjson.com/bins/10lkzb";break;
+      case TEST_PAGE_ORDER: url="https://api.myjson.com/bins/cae9n";break;
       case TEST_PAGE_SIMULATEEXAM: url="http://47.101.222.162:8080/lastversion/selectQuestion4ForExam";break;
       case TEST_PAGE_ALLSIMULATE: url="https://api.myjson.com/bins/17fgr7" ;break;
       default : url="https://api.myjson.com/bins/zpkz3";

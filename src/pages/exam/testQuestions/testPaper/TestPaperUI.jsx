@@ -5,6 +5,8 @@ import { StyledTestPaper, StyledTestBottom } from './StyledTestPaper'
 
 export default (props) => {
   console.log(props);
+  let didHistory = localStorage.getItem('didHistory')
+  console.log(JSON.parse(didHistory));
   return (
     <>
       <StyledTestPaper>
@@ -14,14 +16,14 @@ export default (props) => {
               <div id={value.id} className="swiper-slide" key={value.id}>
                 <div className="testTitle">
                   <span className="testType">
-                    单选题
+                    题目
                   </span>
                   {/* <p className="testText">驾驶机动车在道路上<i>违反道路交通安全法</i>的行为，属于什么行为</p> */}
                   <p className="testText">{value.question}</p>
                 </div>
                 {value.url ? (
                   <div className="picture">
-                    <img src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=1884170963,1847040622&fm=173&app=49&f=JPEG?w=218&h=146&s=FD51E11B5D527453189D2AE80300F026" alt="" />
+                    <img src={`${value.url}`} alt="" />
                   </div>)
                   : ''
                 }
@@ -61,10 +63,10 @@ export default (props) => {
                       <div className="answer_option">
                         答案<i>{(() => {
                           switch (value.answer) {
-                            case 1: return 'A';
-                            case 2: return 'B';
-                            case 3: return 'C';
-                            case 4: return 'D';
+                            case "1": return 'A';
+                            case "2": return 'B';
+                            case "3": return 'C';
+                            case "4": return 'D';
                             default: break;
                           }
                         })()}</i>
@@ -106,12 +108,12 @@ export default (props) => {
             <div className="true">
               <span className="pic"></span>
               <span className="num">{
-                Object.keys(JSON.stringify(localStorage.getItem('didHistory'))).length
+                Object.keys(JSON.parse(localStorage.getItem('didHistory'))).length
               }</span>
             </div>
             <div className="false">
               <span className="pic"></span>
-              <span className="num">{Object.keys(JSON.stringify(localStorage.getItem('errorHistory'))).length}</span>
+              <span className="num">{Object.keys(JSON.parse(localStorage.getItem('errorHistory'))).length}</span>
             </div>
             <div className="menu">
               <span className="pic"></span>
