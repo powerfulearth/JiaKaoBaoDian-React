@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Tabs } from 'antd-mobile';
 import {connect} from 'react-redux';
-
+import {Link} from 'react-router-dom';
 import { change } from './indexActionCreater';
 
 import { StyledIndexContainer } from './StyledIndex.js'
@@ -46,7 +46,7 @@ class index extends Component {
           <header>
             <h3>驾考宝典</h3>
             <p>
-              北京
+            <Link style={{color:'#000'}} to='/apply/cityList/'>北京</Link>
             <span className="iconfont icon-unfold"></span>
             </p>
           </header>

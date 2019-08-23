@@ -26,6 +26,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "build-back":"react-scripts build",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject"
   },

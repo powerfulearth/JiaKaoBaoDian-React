@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { StyledTestPaper, StyledTestBottom } from './StyledTestPaper'
 
 export default (props) => {
+  console.log(props);
   return (
     <>
       <StyledTestPaper>
@@ -104,11 +105,13 @@ export default (props) => {
           <div className="b_right" onTouchEnd={props.popupMenu}>
             <div className="true">
               <span className="pic"></span>
-              <span className="num">0</span>
+              <span className="num">{
+                Object.keys(JSON.stringify(localStorage.getItem('didHistory'))).length
+              }</span>
             </div>
             <div className="false">
               <span className="pic"></span>
-              <span className="num">0</span>
+              <span className="num">{Object.keys(JSON.stringify(localStorage.getItem('errorHistory'))).length}</span>
             </div>
             <div className="menu">
               <span className="pic"></span>

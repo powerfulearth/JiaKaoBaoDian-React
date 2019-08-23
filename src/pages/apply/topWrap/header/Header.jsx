@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 import {HeaderContainer} from './StyledHeader';
 import B_arrow from '../../../../assets/images/apply/b_arrow.png';
@@ -9,7 +10,7 @@ class Header extends Component {
     return (
       <HeaderContainer>
         <div className="bj">
-          北京
+        <Link style={{color:'#000'}} to='/apply/cityList/'>北京</Link>
           <img src={B_arrow} alt=""/>
         </div>
         <Search></Search>
