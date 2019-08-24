@@ -9,8 +9,8 @@ const asyncLoadData = (type) => {
   return (dispatch) => {
     let url=""
     switch(type){
-      case TEST_PAGE_ORDER: url="https://api.myjson.com/bins/10lkzb";break;
-      case TEST_PAGE_SIMULATEEXAM: url=" https://api.myjson.com/bins/b7wxf";break;
+      case TEST_PAGE_ORDER: url="https://api.myjson.com/bins/cae9n";break;
+      case TEST_PAGE_SIMULATEEXAM: url="http://47.101.222.162:8080/lastversion/selectQuestion4ForExam";break;
       case TEST_PAGE_ALLSIMULATE: url="https://api.myjson.com/bins/17fgr7" ;break;
       default : url="https://api.myjson.com/bins/zpkz3";
     }
@@ -30,17 +30,20 @@ const selected = (type, info) => {
   return (dispatch) => {
     switch(type){
       case 'true' : 
-        console.log("回答征",info);
+        console.log("回答正确",info);
         didHistory[info.id]=info
         localStorage.setItem('didHistory',JSON.stringify(didHistory));
-        // dispatch('true',{
-        //   id:info.id
-        // })
+        dispatch({
+          type:'right'
+        })
         break;
       case 'false' :
         console.log("错了",info);
         errorHistory[info.id]=info
         localStorage.setItem('errorHistory',JSON.stringify(errorHistory));
+        dispatch({
+          type:'error'
+        })
         break;
     }
   }

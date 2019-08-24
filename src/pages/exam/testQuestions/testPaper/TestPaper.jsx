@@ -17,7 +17,7 @@ class TestPaper extends Component {
       examList: [],
       didHistory: {},
       currentQuestion:1,
-      TotalQuestion:0
+      TotalQuestion:0,
     }
   }
 
@@ -173,7 +173,6 @@ class TestPaper extends Component {
         }
       })
     }, 2000)
-
   }
 
   componentWillUnmount() {
@@ -188,7 +187,9 @@ const mapState = state => ({
   list: state.testPaper.list,
   isTab: state.testHeader.isTab,
   select: state.testPaper.select,
-  orderExam: state.testPaper.orderExam
+  orderExam: state.testPaper.orderExam,
+  right:state.testPaper.right,
+  error:state.testPaper.error
 })
 const mapDispatch = dispatch => ({
   loadData(type) {
