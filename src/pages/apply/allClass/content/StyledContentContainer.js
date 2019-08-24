@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 
 const ContentContainer = styled.div`
+  width:100%;
+  height: 100%;
   background: #ffffff;
   >p:first-child{
     padding: .3rem 0 .2rem .155rem;

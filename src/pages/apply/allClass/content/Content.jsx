@@ -17,6 +17,9 @@ class Content extends Component {
         <ClassType></ClassType>
         <ClassType></ClassType>
         <ClassType></ClassType>
+        <ClassType></ClassType>
+        <ClassType></ClassType>
+        <ClassType></ClassType>
       </ContentContainer>
     );
   }

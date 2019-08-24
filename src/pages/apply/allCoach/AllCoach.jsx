@@ -16,6 +16,9 @@ class AllCoach extends Component {
         <CoachItem></CoachItem>
         <CoachItem></CoachItem>
         <CoachItem></CoachItem>
+        <CoachItem></CoachItem>
+        <CoachItem></CoachItem>
+        <CoachItem></CoachItem>
       </AllCoachContainer>
     );
   }
