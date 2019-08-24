@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 import {NavContainer} from './StyledNav';
 import NavImg from '../../../../assets/images/apply/nav1.png';
@@ -33,10 +34,10 @@ class Nav extends Component {
       {titles:"驾考锦鲤",imgs: NavImg10}
     ]
     const navList = data.map( (item) => (
-                      <a href="{item.titles.toString()}" key={item.titles.toString()}>
+                      <Link href="{item.titles.toString()}" key={item.titles.toString()}>
                         <img src={item.imgs} alt=""/>
                         <span>{item.titles}</span>
-                      </a>
+                      </Link>
                     ))
     return (
       <NavContainer>

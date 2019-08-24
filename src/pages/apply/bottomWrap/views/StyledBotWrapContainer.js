@@ -59,7 +59,7 @@ const Item = styled.div`
 const BorderItem = styled(border({
   component: Item,
   borderWidth: '0 0 1px 0',
-  borderColor: '#f00'
+  borderColor: '#A1A1A1'
 }))`
   color: #ee742f;
 `
