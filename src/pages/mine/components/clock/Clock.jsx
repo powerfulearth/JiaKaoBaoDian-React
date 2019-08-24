@@ -45,6 +45,7 @@ export default class Clock extends Component {
       return;
     }
     this.countDown();
+    this.createCode();
   }
 
 
@@ -64,4 +65,8 @@ export default class Clock extends Component {
     }
   }
 
+  createCode() {
+    let code = Math.floor(Math.random()*899999 + 100000)
+    alert(code)
+  }
 }

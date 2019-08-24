@@ -5,6 +5,8 @@ import { LoginPhoneContainer } from './StyledLoginAccount.js'
 
 import Clock from '../../../components/clock/Clock';
 
+import axios from 'axios'
+
 export default class LoginAccountContainer extends Component {
   constructor(props) {
     super(props)
@@ -17,7 +19,9 @@ export default class LoginAccountContainer extends Component {
         ererror: ''
       }
     }
+    this.loginHandler = this.loginHandler.bind(this)
   }
+  
 
   render() {
     let { keyWord, phone, password, bool } = this.state
@@ -38,7 +42,7 @@ export default class LoginAccountContainer extends Component {
               }}
               onChange={(e) => {
                 this.setState({
-                  phone: e.target.value.toUpperCase()
+                  phone: e.target.value
                 })
               }}
             />
@@ -56,7 +60,7 @@ export default class LoginAccountContainer extends Component {
               }}
               onChange={(e) => {
                 this.setState({
-                  password: e.target.value.toUpperCase()
+                  password: e.target.value
                 })
               }}
             />
@@ -70,11 +74,22 @@ export default class LoginAccountContainer extends Component {
           <p><i className={ bool === true ? 'yes' : 'no' } onClick={()=>{this.setState({ bool: bool? false : true })}}></i>同意用户使用协议</p>
           <span>忘记密码</span>
         </div>
-        <div>登录</div>
+        <div onClick = {this.loginHandler}>登录</div>
         <div><span></span></div>
         <div><Link to="/mine/register">免费注册</Link></div>
       </LoginPhoneContainer>
     )
+  }
+
+  loginHandler() {
+    axios.post('http://47.102.110.15:8888/jiakao/login', {
+      userId: 'aaa',
+      userPassword: 'aaa'
+    })
+    .then((res) => {
+      console.log(res)
+    })
+    
   }
 
   handlerFocus(keyWord) {

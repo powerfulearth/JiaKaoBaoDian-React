@@ -66,12 +66,23 @@ export default class LoginAccountContainer extends Component {
           <p><i className={ bool === true ? 'yes' : 'no' } onClick={()=>{this.setState({ bool: bool? false : true })}}></i>同意用户使用协议</p>
           <span>忘记密码</span>
         </div>
-        <div>登录</div>
+        <div onClick={this.loginHandler}>登录</div>
         <div><span></span></div>
         <div><Link to="/mine/register">免费注册</Link></div>
       </LoginPhoneContainer>
     )
   }
+
+  // loginHandler() {
+  //   axios({
+  //     url: 'http://47.102.110.15:8888/jiakao/login',
+  //     method: 'post',
+  //     data: {
+  //       userId: 'aaa',
+  //       uerPassword: 'aaa'
+  //     }
+  //   })
+  // }
 
   handlerFocus(keyWord) {
     this.setState({
