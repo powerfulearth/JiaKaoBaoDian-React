@@ -34,7 +34,7 @@ class Nav extends Component {
       {titles:"驾考锦鲤",imgs: NavImg10}
     ]
     const navList = data.map( (item) => (
-                      <Link href="{item.titles.toString()}" key={item.titles.toString()}>
+                      <Link to="/" key={item.titles.toString()}>
                         <img src={item.imgs} alt=""/>
                         <span>{item.titles}</span>
                       </Link>

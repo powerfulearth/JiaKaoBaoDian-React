@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 import {BotContainer , BorderItem} from './StyledBotWrapContainer';
-import BottomWrapUI from './BottomWrapUI';
+// import BottomWrapUI from './BottomWrapUI';
 import { loadDataAsync } from '../actionCreator';
 import {Link} from 'react-router-dom';
 
@@ -24,9 +24,9 @@ class BottomWrap extends Component {
     // console.log(this.props.list)
     return (
       <BotContainer>
-        <BorderItem hasBorder={true}>
+        {/* <BorderItem hasBorder={true}>
           <BottomWrapUI list={this.props.list.applyReducer.list}></BottomWrapUI>
-        </BorderItem>
+        </BorderItem> */}
         <BorderItem hasBorder={true}>
           <Link to="/apply/jxdetail">
             <img src={JiaxiaoImg} alt=""/>
