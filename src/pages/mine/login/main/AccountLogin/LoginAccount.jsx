@@ -66,7 +66,10 @@ export default class LoginAccountContainer extends Component {
             />
            <Clock onRef={this.onRef} sendMsg={this.sendMsg}/>
             
-            <Clock onRef={this.onRef} sendMsg={this.sendMsg} /> 
+            {/* {
+              Link === 'phone' ? <Clock onRef={this.onRef} sendMsg={this.sendMsg} />
+              : ''
+            }  */}
             <span className="hint hidden">验证码错误，请重新输入</span>
           </div>
         </div>
@@ -87,7 +90,7 @@ export default class LoginAccountContainer extends Component {
       userPassword: 'aaa'
     })
     .then((res) => {
-      console.log(res)
+      alert(res.data.msg)
     })
     
   }
